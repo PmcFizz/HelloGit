@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>使用requirejs 加载dataTable组件</title>
+		<link rel="stylesheet" href="../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../plugins/dataTable/css/dataTables.bootstrap.css" />
+	</head>
+
+	<body>
+		<div class="container" style="margin-top: 20px;">
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table table-bordered table-hover definewidth m10 dataTables-example" id="exampleTable">
+						<thead>
+							<th>name</th>
+							<th>position</th>
+							<th>salary</th>
+							<th>start_date</th>
+							<th>office</th>
+							<th>extn</th>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="../plugins/requirejs/require-2.1.11.js" data-main="../public/js/home"></script>
+	</body>
+
+</html>

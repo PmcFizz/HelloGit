@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>echarts </title>
+		<link rel="stylesheet" href="../../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+	</head>
+
+	<body>
+		 
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12" id="main" style="height: 600px;"></div>
+			</div>
+		</div>
+		<script src="../../plugins/echarts/echarts.min.js"></script>
+		<script>
+			var data = [];
+			for (var i = 0; i <= 360; i++) {
+				var t = i / 180 * Math.PI;
+				var r = Math.sin(2 * t) * Math.cos(2 * t);
+				data.push([r, i]);
+			}
+			option = {
+				title: {
+					text: '极坐标双数值轴'
+				},
+				legend: {
+					data: ['line']
+				},
+				polar: {
+					center: ['50%', '54%']
+				},
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'cross'
+					}
+				},
+				angleAxis: {
+					type: 'value',
+					startAngle: 0
+				},
+				radiusAxis: {
+					min: 0
+				},
+				series: [{
+					coordinateSystem: 'polar',
+					name: 'line',
+					type: 'line',
+					showSymbol: false,
+					data: data
+				}],
+				animationDuration: 2000
+			};
+			var myChart = echarts.init(document.getElementById('main'));
+			myChart.setOption(option);
+		</script>
+	</body>
+
+</html>

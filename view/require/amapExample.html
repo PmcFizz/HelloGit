@@ -21,6 +21,12 @@
 			<input type="checkbox" id="overview" onclick="toggleOverViewShow(this)" />显示鹰眼
 			<input type="checkbox" id="overviewOpen" disabled onclick="toggleOverViewOpen(this)" />展开鹰眼
 		</div>
+		<div class='button-group' style="background-color: #0d9bf2">
+			<input type='radio' onclick='refresh(this.value)' checked name='mapStyle' value='normal'>normal
+			<input type='radio' onclick='refresh(this.value)' name='mapStyle' value='blue_night'>blue_night
+			<input type='radio' onclick='refresh(this.value)' name='mapStyle' value='light'>light
+			<input type='radio' onclick='refresh(this.value)' name='mapStyle' value='fresh'>fresh
+		</div>
 		<script>
 			var scale = new AMap.Scale({
 					visible: false
@@ -144,6 +150,10 @@
 			function hideToolBarRuler() {
 				document.getElementById('toolbarRuler').checked = false;
 				toolBar.hideRuler();
+			}
+
+			function refresh(e) {
+				map.setMapStyle(e);
 			}
 		</script>
 	</body>

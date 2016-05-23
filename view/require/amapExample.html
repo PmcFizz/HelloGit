@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<title>带功能控件的地图</title>
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=d799a2887868628bf7782fcd6b2c0ed1&&plugin=AMap.Scale,AMap.OverView,AMap.ToolBar"></script>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		<div class='button-group' style="background-color: #0d9bf2;right: 125px">
+			<input type="checkbox" onclick="toggleScale(this)" />比例尺
+			<input type="checkbox" id="toolbar" onclick="toggleToolBar(this)" />工具条
+			<input type="checkbox" id="toolbarDirection" disabled onclick="toggleToolBarDirection(this)" />工具条方向盘
+			<input type="checkbox" id="toolbarRuler" disabled onclick="toggleToolBarRuler(this)" />工具条标尺
+			<input type="checkbox" id="overview" onclick="toggleOverViewShow(this)" />显示鹰眼
+			<input type="checkbox" id="overviewOpen" disabled onclick="toggleOverViewOpen(this)" />展开鹰眼
+		</div>
+		<script>
+			var scale = new AMap.Scale({
+					visible: false
+				}),
+				toolBar = new AMap.ToolBar({
+					visible: false
+				}),
+				overView = new AMap.OverView({
+					visible: false
+				}),
+				map = new AMap.Map("container", {
+					resizeEnable: true,
+					center: [116.397428, 39.90923]
+				});
+			map.addControl(scale);
+			map.addControl(toolBar);
+			map.addControl(overView);
+			var markes = [];
+			for (var i = 0; i < 10; i++) {
+				var x = (116 - i),
+					y = (39 - i);
+				var icon = "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png";
+				var position = [x, y]
+				markes.push({
+					icon: icon,
+					position: position
+				});
+			}
+			markes.forEach(function(marker) {
+				new AMap.Marker({
+					map: map,
+					icon: marker.icon,
+					position: [marker.position[0], marker.position[1]],
+					offset: new AMap.Pixel(-12, -36)
+				});
+			});
+
+			function toggleScale(checkbox) {
+				if (checkbox.checked) {
+					scale.show();
+				} else {
+					scale.hide();
+				}
+			}
+
+			function toggleToolBar(checkbox) {
+				if (checkbox.checked) {
+					showToolBar();
+					showToolBarDirection();
+					showToolBarRuler();
+				} else {
+					hideToolBar();
+					hideToolBarDirection();
+					hideToolBarRuler();
+				}
+			}
+
+			function toggleToolBarDirection(checkbox) {
+				if (checkbox.checked) {
+					toolBar.showDirection()
+				} else {
+					toolBar.hideDirection()
+				}
+			}
+
+			function toggleToolBarRuler(checkbox) {
+				if (checkbox.checked) {
+					toolBar.showRuler();
+				} else {
+					toolBar.hideRuler();
+				}
+			}
+
+			function toggleOverViewShow(checkbox) {
+				if (checkbox.checked) {
+					overView.show();
+					document.getElementById('overviewOpen').disabled = false;
+				} else {
+					overView.hide();
+					document.getElementById('overviewOpen').disabled = true;
+				}
+			}
+
+			function toggleOverViewOpen(checkbox) {
+				if (checkbox.checked) {
+					overView.open();
+				} else {
+					overView.close();
+				}
+			}
+
+			function showToolBar() {
+				document.getElementById('toolbar').checked = true;
+				document.getElementById('toolbarDirection').disabled = false;
+				document.getElementById('toolbarRuler').disabled = false;
+				toolBar.show();
+			}
+
+			function hideToolBar() {
+				document.getElementById('toolbar').checked = false;
+				document.getElementById('toolbarDirection').disabled = true;
+				document.getElementById('toolbarRuler').disabled = true;
+				toolBar.hide();
+			}
+
+			function showToolBarDirection() {
+				document.getElementById('toolbarDirection').checked = true;
+				toolBar.showDirection();
+			}
+
+			function hideToolBarDirection() {
+				document.getElementById('toolbarDirection').checked = false;
+				toolBar.hideDirection();
+			}
+
+			function showToolBarRuler() {
+				document.getElementById('toolbarRuler').checked = true;
+				toolBar.showRuler();
+			}
+
+			function hideToolBarRuler() {
+				document.getElementById('toolbarRuler').checked = false;
+				toolBar.hideRuler();
+			}
+		</script>
+	</body>
+
+</html>

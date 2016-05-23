@@ -12,7 +12,9 @@ require.config({
 		"jquery": "../../../plugins/jquery/jquery-1.12.mini",
 		"bootstrap": "../../../plugins/bootstrap-3.3.5-dist/js/bootstrap.min",
 		"jquery.dataTables": "../../../plugins/dataTable/js/jquery.dataTables.min",
-		"datatables.net": "../../../plugins/dataTable/js/dataTables.bootstrap.min"
+		"datatables.net": "../../../plugins/dataTable/js/dataTables.bootstrap.min",
+		"datatables.net-autofill": "./../../plugins/dataTable/AutoFill-2.1.2/js/autoFill.bootstrap.min",
+		"bootstrap.autofill": "../../../plugins/dataTable/AutoFill-2.1.2/js/autoFill.bootstrap.min"
 	},
 	shim: {
 		'bootstrap': {
@@ -45,7 +47,9 @@ require(['bootstrap', 'jquery.dataTables', 'datatables.net', 'jquery'], function
 			"type": "get",
 			"data": function(d) {
 				d.keyword = $.trim($("#searchkey").val());
-			}
+			},
+			dom: 'Bfrtip',
+			buttons: ['colvis', 'excel', 'print']
 		},
 		columns: [{
 			"data": "name"

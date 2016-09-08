@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+		<title>Angularjs services应用</title>
+	</head>
+
+	<body ng-app="app">
+		<div class="container" ng-controller="FCtrol">
+			<input type="text" ng-model="data.msg" />
+			<h1>{{data.msg}}</h1>
+		</div>
+
+		<div class="container" ng-controller="SCtrol">
+			<input type="text" ng-model="data.shopcart" />
+			<h1>{{data.shopcart}}</h1>
+		</div>
+
+		<script src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
+		<script>
+			var app = angular.module("app", []);
+			app
+				.factory('Data', function() {
+					return {
+						msg: 'factory',
+						shopcart: ['1', '2']
+					}
+				})
+				.controller('FCtrol', function($scope, Data) { //下单
+					$scope.data = Data;
+				})
+
+				.controller('SCtrol', function($scope, Data) { //购物车
+					$scope.data = Data
+				})
+		</script>
+	</body>
+
+</html>

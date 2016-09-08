@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="../../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
+		<title>Angularjs services  四种方法</title>
+	</head>
+
+	<body ng-app="app">
+		<div class="container" ng-controller="MyCtrl">
+			<h1>{{realname}}</h1>
+			<h1>{{http}}</h1>
+			<h1>{{data.msg}}</h1>
+			<h1>{{uname}}</h1>
+		</div>
+		<script src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
+		<script>
+			var app = angular.module("app", []);
+			app.value('realname', 'wangwu') //可以改变
+				.constant('http', 'www.baidu.com') //不可以改变
+				.factory('Data', function() {
+					return {
+						msg: '你好啊',
+						setMsg: function() {
+							this.msg = "我不好";
+						}
+					}
+				})
+				.service("User", function() {
+					this.firstname = "wang";
+					this.lastname = "wu";
+					this.getName = function() {
+						return this.firstname + this.lastname;
+					}
+				})
+				.controller('MyCtrl', function($scope, realname, http, Data, User) {
+					$scope.msg = "你好";
+					$scope.realname = realname;
+					$scope.http = http;
+					$scope.data = Data;
+					Data.setMsg();
+					$scope.uname = User.getName();
+				})
+		</script>
+	</body>
+
+</html>

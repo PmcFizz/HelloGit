@@ -1,6 +1,6 @@
 {
   "name": "Hellogit",
   "tagline": "The Frist Git Project",
-  "body": "My name is Pang Mengchen.",
+  "body": "My name is Pang Mengchen.\r\n* 陪爸妈逛街\r\n* 去姥姥家\r\n* 拜访老朋友\r\n* 看一本书\r\n* 相亲\r\n* 去听一节数学课\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }

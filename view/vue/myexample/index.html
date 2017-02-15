@@ -1,0 +1,208 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>vue 事例首页</title>
+</head>
+<body>
+	<p>首先让我们一步一步的学习vue 慢慢的</p>
+	<div id="app">
+		{{message}}
+	</div>
+
+	<div id="app-2">
+		<span v-bind:title="message">
+			Hover your mouse over me for a few seconds to see my dynamically bound title !
+		</span>
+	</div>
+
+	<div id="app-3">
+		<p v-if="seen">Now you see me</p>
+	</div>
+
+	<div id="app-4">
+		<ol>
+			<li v-for="todo in todos">
+				{{todo.text}}
+			</li>
+		</ol>
+	</div>
+
+	<div id="app-5">
+		<p>{{message}}</p>
+		<button v-on:click="reverseMessage">Reverse Message</button>
+	</div>
+
+	<div id="app-6">
+		<p>{{message}}</p>
+		<input v-model="message">
+	</div>
+
+	<div id="app-7">
+		<ol>
+			<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+		</ol>
+	</div>
+
+	<div id="app-8">
+		<p>Original message :"{{message}}"</p>
+		<p>Computed reversed message :"{{reversedMessage}}"</p>
+	</div>
+
+	<div id="app-9">{{fullName}}</div>
+
+	<div id="app-10">
+		<p>Ask a yes/no question :<input v-model="question">
+		<p>{{answer}}</p>
+	</div>
+
+
+<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<!--案例10所用资源Start-->
+<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<!--案例10所用资源End-->
+
+<script type="text/javascript">
+	var app=new Vue({
+		el:'#app',
+		data:{
+			message:'Hello Vue!'
+		}
+	})
+
+	var app2=new Vue({
+		el:"#app-2",
+		data:{
+			message:"You load this page on"+new Date()
+		}
+	})
+
+	var app3=new Vue({
+		el:"#app-3",
+		data:{
+			seen:true
+		}
+	})
+
+	var app4=new Vue({
+		el:"#app-4",
+		data:{todos:[{
+			text:"learn vue"
+		},{
+			text:"learn react"
+		},{
+			text:"learn webpack"
+		}]}		
+	})
+
+	var app5=new Vue({
+		el:"#app-5",
+		data:{
+			message:"This is default message"
+		},
+		methods:{
+			reverseMessage:function(){
+				this.message=this.message.split('').reverse().join('')
+			}
+		}
+	})
+
+	var app6=new Vue({
+		el:"#app-6",
+		data:{
+			message:"This is default content!"
+		}
+	})
+
+	Vue.component('todo-item',{
+		props:['todo'],
+		template:'<li>{{todo.text}}</li>'
+	})
+
+	var app7=new Vue({
+		el:"#app-7",
+		data:{
+			groceryList:[{
+				text:"Vegetables"
+			},{
+				text:"Cheese"
+			},{
+				text:"Whatever else humans are supposed to eat "
+			}]
+		}
+	})
+
+	var app8=new Vue({
+		el:"#app-8",
+		data:{
+			message:"Hello"
+		},
+		computed:{
+			reversedMessage:function(){
+				return this.message.split("").reverse().join("")
+			}
+		}
+	})
+
+	var app9=new Vue({
+		el:"#app-9",
+		data:{
+			firstName:"Foo",
+			lastName:"Bar"
+		},
+		computed:{
+			fullName:{
+				get:function(){
+					return this.firstName+' '+this.lastName	
+				},
+				set:function(newValue){
+					var names=newValue.split(" ");
+					this.firstName=names[0];
+					this.lastName=names[1];
+					this.lastName=names[names.length-1];
+
+				}
+				
+			}
+		}
+	})
+
+	var watchExampleVM=new Vue({
+		el:"#app-10",
+		data:{
+			question:"",
+			answer:"I cannot give you an answer until you ask a question !"
+		},
+		watch:{
+			question:function(newQuestion){
+				this.answer="Waiting for you to stop typing..."
+				this.getAnswer()
+			}
+		},
+		methods:{
+			getAnswer:_.debounce(
+				function(){
+					var vm=this
+					if(this.question.indexOf("?")===-1){
+						vm.answer="Question usually contain a question mark. :)"
+						return;
+					}
+					vm.answer="Thinking..."
+					axios.get("https://yesno.wtf/api")
+						 .then(function(response){
+						 	vm.answer=_.capitalize(response.data.answer)
+						 })
+						 .catch(function(error){
+						 	vm.answer="Error ! Could not reach the API"+error
+						 })
+				},1000)
+		}
+	})
+
+
+
+</script>
+
+</body>
+</html>

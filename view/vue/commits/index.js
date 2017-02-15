@@ -19,8 +19,20 @@
 				var newline=v.indexOf('\n');
 				return newline>0 ?v.slice(0,newline) : v
 			},
-			formatData:function(v){
+			formatDate:function(v){
 				return v.replace(/T|Z/g,' ')
+			}
+		},
+		methods:{
+			fetchData:function(){
+				var xhr=new XMLHttpRequest();
+				var self=this;
+				xhr.open('GET',apiURL+self.currentBranch)
+				xhr.onload=function(){
+					self.commits=JSON.parse(xhr.responseText);
+					console.log(self.commits[0].html_url)
+				}
+				xhr.send()
 			}
 		}
 	})

@@ -52,7 +52,7 @@
 				shuffle(){
 					this.items=_.shuffle(this.items)
 				},
-				remove(){
+				remove(item){
 					var i=this.items.indexOf(item);
 					if(i>-1){
 						this.items.splice(i,1)

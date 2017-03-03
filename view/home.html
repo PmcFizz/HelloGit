@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>配置DataTable列表页</title>
+	<link rel="stylesheet" type="text/css" href="../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	<div class="panel panel-success">
+		<div class="panel-heading">可选项</div>
+		<div class="panel-body">
+			<div class="row" style="margin-top: 20px">
+				<form class="form-horizontal" role="form" >
+					<div class="form-group">
+						<label class="col-md-2 control-label">必选插件</label>
+						<div class="col-md-10">
+							<label class="col-md-3"><input type="checkbox" checked="true" value="bootstrapmincss" name="must">bootstrap.min.css</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="fontawesomemincss" name="must">font-awesome.min.css</label>
+							<label class="col-md-3">
+								<input type="checkbox" checked="true" value="dataTablesbootstrapcss" name="must">
+								dataTables.bootstrap.css
+							</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="animatemincss" name="must">animate.min.css</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="stylemincss" name="must">style.min.css</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="sweetalertcss" name="must">sweetalert.css</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="jquery211minjs" name="must">jquery-2.1.1.min.js</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="sweetalertminjs" name="must">sweetalert.min.js</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="bootstrapminjs" name="must">bootstrap.min.js</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="commonjs" name="must">common.js</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="jquerydataTablejs" name="must">jquery.dataTables.js</label>
+							<label class="col-md-3">
+								<input type="checkbox" checked="true" value="dataTablesbootstrapjs" name="must">
+								dataTables.bootstrap.js
+							</label>
+							<label class="col-md-3"><input type="checkbox" checked="true" value="searchform" name="must">搜索表单</label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-2 control-label">可选插件</label>
+						<div class="col-md-10">
+							<label class="col-md-3"><input type="checkbox" name="option" value="laydate">日期插件 laydate.js</label>
+							<label class="col-md-3"><input type="checkbox" name="option" value="outlink">外链套装</label>
+							<label class="col-md-3"><input type="checkbox" name="option" value="model">模态框</label>
+							<label class="col-md-3"><input type="checkbox" name="option" value="icheck">iCheck</label>
+							<!-- <label class="col-md-3"><input type="checkbox" name="">iCheck</label>
+							<label class="col-md-3"><input type="checkbox" name="">iCheck</label> -->
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-12 text-center"><button class="btn btn-success" id="createcodebtn" type="button">生成代码</button></div>
+
+					</div>
+
+					<div class="col-md-12"><textarea style="width: 100%;height: 200px" id="jspcontent">jspcontent</textarea></div>
+					<div class="col-md-12"><textarea style="width: 100%;height: 200px" id="jscontent">jscontent</textarea></div>
+				</form>
+		</div>
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="vue/vue.js"></script>
+	<script type="text/javascript" src="../plugins/jquery/jquery-1.12.mini.js"></script>
+	<script type="text/javascript" src="home.js"></script>
+
+</body>
+</html>

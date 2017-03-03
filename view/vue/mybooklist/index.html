@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>使用Vue 整理的书单</title>
+	<style type="text/css">
+		.container{width: 750px;margin:0 auto; text-align: center;border: 1px solid #ddd}
+		.container .col-sm-4{width: 33%;border: 1px solid #ddd}
+		li{list-style: none;text-align: left;}
+
+	</style>
+
+</head>
+<body>
+	<div class="container" id="example">
+		<div class="col-sm-4">
+			<input type="text" placeholder="请输入您要添加的书籍" v-model="addreadybook" v-on:keyup.enter="addonebook" name="">
+			<input type="text" placeholder="请输入您要查询的书籍名称" v-model="searchbookname" @keyup.enter="searchbook">
+			<ul>
+				<li v-for="item in readyed ">{{item}}<button v-on:click="removebook(item)">X</button></li>				
+			</ul>
+		</div>
+	</div>
+
+<script type="text/javascript" src="../vue.js"></script>	
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

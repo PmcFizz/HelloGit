@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Angular Demo Home </title>
+	<style type="text/css">
+		a{height: 20px;height: 50px;background-color: white;color: black;border: 1px solid #ddd}
+	</style>
+</head>
+<body>
+<div class="app" ng-app="app">
+	<a ui-sref="header">--Header--</a>	
+	<a ui-sref="content">--Content--</a>	
+	<a ui-sref="footer">--Footer--</a>	
+	<div ui-view></div>
+</div>
+
+<script type="text/javascript" src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
+<script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="home.js"></script>
+</body>
+</html>

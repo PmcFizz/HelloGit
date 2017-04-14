@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>鑫远管理系统</title>
+    <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="./vendors/angular/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="./vendors/angular/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="./vendors/angular/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="./vendors/angular/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="./vendors/angular/css/font.css" type="text/css" />
+
+    <!--ace图标 后面用这个-->
+    <link rel="stylesheet" href="./styles/icomoon.font.css" type="text/css" />
+    <!--加载框-->
+    <link rel="stylesheet" href="./styles/loading.css" type="text/css" />
+
+    <link rel="stylesheet" href="./vendors/angular/css/app.css" type="text/css" />
+
+    <!--加载弹窗模块由于http过滤需要用到就要先加载-->
+    <link rel="stylesheet" href="./vendors/angular/vendor/modules/angularjs-toaster/toaster.css" type="text/css" />
+</head>
+<body ng-controller="AppCtrl">
+
+<div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
+<!-- toaster弹窗绑定 -->
+<toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':false,'newest-on-top':false, 'toast-warning': 0,'limit':1,timeout:1000000}"></toaster-container>
+
+
+<!-- jQuery 修改jq版本 -->
+<script src="./vendors/angular/vendor/jquery/jquery.min.js"></script>
+
+<!--CustromRoute-->
+<script src="./scripts/config/config.route.js"></script>
+
+
+<!-- Angular -->
+<script src="./vendors/angular/vendor/angular/angular.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-animate/angular-animate.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-cookies/angular-cookies.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-resource/angular-resource.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-sanitize/angular-sanitize.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-touch/angular-touch.js"></script>
+<!-- Vendor -->
+<script src="./vendors/angular/vendor/angular/angular-ui-router/angular-ui-router.js"></script><!--路由-->
+<script src="./vendors/angular/vendor/angular/ngstorage/ngStorage.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-breadcrumb/angular-breadcrumb.min.js"></script><!--面包屑-->
+
+<!-- bootstrap -->
+<script src="./vendors/angular/vendor/angular/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- lazyload -->
+<script src="./vendors/angular/vendor/angular/oclazyload/ocLazyLoad.js"></script>
+<!-- translate -->
+<script src="./vendors/angular/vendor/angular/angular-translate/angular-translate.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-translate/loader-static-files.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-translate/storage-cookie.js"></script>
+<script src="./vendors/angular/vendor/angular/angular-translate/storage-local.js"></script>
+
+<!--加载弹窗模块由于http过滤需要用到就要先加载(要加载在app.js之前)-->
+<script src="./vendors/angular/vendor/modules/angularjs-toaster/toaster.js"></script>
+
+<!--富文本框-->
+<script type="text/javascript" src="./vendors/angular-ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="http://ueditor.baidu.com/ueditor/ueditor.all.js"></script>
+<script src="./vendors/angular-ueditor/angular-ueditor.js"></script>
+
+<!--截屏功能-->
+<script src="./vendors/html2canvas/html2canvas.min.js"></script>
+
+
+<!-- App -->
+<script src="./vendors/angular/js/app.js"></script>
+<script src="./vendors/angular/js/config.js"></script>
+<script src="./vendors/angular/js/config.lazyload.js"></script>
+
+<script src="./scripts/config/config.constant.js"></script><!--全局变量配置-->
+<script src="./scripts/config/config.httpInterceptor.js"></script><!--http拦截器-->
+
+<script src="./vendors/angular/js/config.router.js"></script>
+<script src="./vendors/angular/js/main.js"></script>
+<script src="./vendors/angular/js/services/ui-load.js"></script>
+<script src="./vendors/angular/js/filters/fromNow.js"></script>
+<script src="./vendors/angular/js/directives/setnganimate.js"></script>
+<script src="./vendors/angular/js/directives/ui-butterbar.js"></script>
+<script src="./vendors/angular/js/directives/ui-focus.js"></script>
+<script src="./vendors/angular/js/directives/ui-fullscreen.js"></script>
+<script src="./vendors/angular/js/directives/ui-jq.js"></script>
+<script src="./vendors/angular/js/directives/ui-module.js"></script>
+<script src="./vendors/angular/js/directives/ui-nav.js"></script>
+<script src="./vendors/angular/js/directives/ui-scroll.js"></script>
+<script src="./vendors/angular/js/directives/ui-shift.js"></script>
+<script src="./vendors/angular/js/directives/ui-toggleclass.js"></script>
+<script src="./vendors/angular/js/directives/ui-validate.js"></script>
+
+
+<!--定制cotroller eayon 2016-12-13-->
+<!--<script src="./js/controllers.js"></script>-->
+<!--<script src="./mstp_angulr/js/controllers/bootstrap.js"></script>-->
+
+<script src="./scripts/views/common/ui-common-base.js"></script><!--页面基础控件-->
+<script src="./scripts/views/common/ui-form-base.js"></script><!--表单控件-->
+
+<!--服务类基类-->
+<script src="./scripts/services/BaseService.js"></script><!--表单控件-->
+
+<!--login-->
+<script src="./scripts/controllers/signinCtrl.js"></script>
+<!-- Lazy loading -->
+</body>
+</html>

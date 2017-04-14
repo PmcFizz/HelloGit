@@ -1,0 +1,186 @@
+/*// 1. 清除某些元素在不同浏览器下内外补白不同造成的影响*/
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+form,
+input,
+textarea,
+button,
+p,
+th,
+td,
+body,
+html { margin: 0; padding: 0; }
+
+/*// 1. 为不继承的元素设定继承父级行高*/
+
+/*// 2. 为不继承的元素设定继承父级字体*/
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea,
+button { line-height: inherit; font-family: inherit; -webkit-appearance: none;  /*解决iphone safari上的圆角问题*/ }
+
+/*// 1. 为不继承的元素设定继承父级字号*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+button {    /*font-size: inherit;*/ }
+
+/*// 1. 重置斜体表现为正常文本*/
+em,
+i { font-style: normal; }
+
+/*// 1. 清除单元格边距并让边框合并*/
+table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; text-align: left; }
+
+/*// 1. 清除列表默认序号*/
+ul,
+ol,
+menu { list-style: none; }
+
+/*// 1. 清除默认边框*/
+
+/*// 2. 清除img底部留白问题，并使得默认居中*/
+fieldset,
+img { display: block; border: 0; }
+
+/*// 1. 设置HTML5部分新增元素为块元素*/
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section { display: block; }
+
+/*// 1. 设置HTML5新增媒体元素与img, object保持一致*/
+audio,
+canvas,
+video { display: inline-block; }
+
+/*// 1. 设置文本域滚不可拖动改变垂直方向尺寸*/
+textarea { resize: none; }
+
+/*// 1. 清除webkit下表单元素的outline*/
+input,
+textarea,
+button,
+select,
+a { outline: 0 none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*// 1. 清除Firefox按钮内部边框和补白*/
+button::-moz-focus-inner,
+input::-moz-focus-inner { padding: 0; border: 0; }
+select {    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+border: solid 1px #999999; appearance: none;    /*很关键：将默认的select选择框样式清除*/ appearance: none; -moz-appearance: none; -webkit-appearance: none;    /*在选择框的最右侧中间显示小箭头图片*/ background: #fff url("//imgcache.vikduo.com/static/784f9f3bbd53ed0d30e39db5d0aad58f.png") no-repeat  right center; -webkit-background-size: .11rem; background-size: .11rem;    /*为下拉小箭头留出一点位置，避免被文字覆盖*/ padding-right: 14px; }
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+
+/*// 1. 清除文本线条装饰*/
+a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: #6D6A6A; }
+
+/*// 1. 禁止长按链接与图片弹出菜单*/
+
+/*// issues: 在iOS8.1下此设置对a仍无效*/
+a,
+img { -webkit-touch-callout: none; }
+
+/*常用元素設置為怪異模式盒模型*/
+div,
+header,
+footer,
+section,
+ul,
+li,
+dl,
+dt,
+dd { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+
+/*全局字体设置*/
+body,
+html { -webkit-user-select: none; height: 100%; width: 100%; }
+body { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; overflow-scrolling: touch; font-size: .30rem; width: 100%; height: 100%; color: #000; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*清除浮动*/
+.clearfix:after { content: '\200B'; display: block; clear: both; height: 0; overflow: hidden; visibility: hidden; }
+.clearfix { zoom: 1; }
+
+/*弹框*/
+.poplayer_box { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 9999; }
+.poplayer_box.layer_type2 .poplayer_bg { background-color: rgba(0, 0, 0, .0); }
+.poplayer_bg { background-color: rgba(0, 0, 0, .5); pointer-events: auto; }
+.poplayer_content { display: table; pointer-events: none; }
+.poplayer_bg,
+.poplayer_content { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+.poplayer_content .poplayer_section { display: table-cell; vertical-align: middle; text-align: center; }
+.poplayer_box.layer_type2 .layer_style { min-width: 155px; background: rgba(0, 0, 0, .6); }
+.poplayer_section .layer_type { position: relative; display: inline-block; text-align: center; background-color: #fff; font-size: 14px; border-radius: 6px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); opacity: 1; padding: 20px; pointer-events: auto; }
+.poplayer_box .layercont { font-size: 14px; }
+.poplayer_box i.icon { width: 38px; height: 25px; color: #333333; display: inline-block; background: url('../image/icon/layer_icon.png') no-repeat; background-size: 100px; vertical-align: middle; text-indent: -9999px; }
+.poplayer_box.layer_type2 .layercont .layer_text { color: #fff; padding: 6px; }
+
+/*蒙层样式*/
+.loadingBox { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.5); z-index: 999; }
+.loadingBox img { position: absolute; top: 0; left: 0; margin: auto; right: 0; bottom: 0; }
+
+/*蒙层样式*/
+
+/*1像素细线 */
+.line { position: relative; z-index: 1; }
+.kline:after { position: absolute; z-index: 1; content: ""; left: 0; top: 0; border: 1px solid #d9d9d9; width: 100%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.bline,
+.tline,
+.lline,
+.rline { position: relative; }
+.bline:after { content: ""; position: absolute; z-index: 1; left: 0; right: 0; bottom: -1px; border-top: 1px solid #d9d9d9; }
+.bline.xv:after { border-top-style: dashed; }
+.tline:before,
+.lline:before,
+.rline:before { content: ""; position: absolute; z-index: 1; top: 0; }
+.tline:before { left: 0; right: 0; border-top: 1px solid #d9d9d9; }
+.lline:before { bottom: 0; left: 0; border-left: 1px solid #d9d9d9; }
+.rline:before { bottom: 0; right: -1px; border-right: 1px solid #d9d9d9; }
+.rline.xv:before { border-right-style: dashed; }
+.dashed:before { border-top-style: dashed; }
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), (min-resolution:120dpi), (-ms-high-contrast:active), (-ms-high-contrast:none) {
+    .kline:after { width: 200%; height: 200%; -webkit-transform: scale(.5); -moz-transform: scale(.5); -ms-transform: scale(.5); -o-transform: scale(.5); transform: scale(.5); -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
+    .bline:after,
+    .tline:before { -webkit-transform: scaleY(.5); -moz-transform: scaleY(.5); -ms-transform: scaleY(.5); -o-transform: scaleY(.5); transform: scaleY(.5); -webkit-transform-origin: 100% 0; -moz-transform-origin: 100% 0; -ms-transform-origin: 100% 0; -o-transform-origin: 100% 0; transform-origin: 100% 0; }
+    .lline:before,
+    .rline:before { -webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5); -webkit-transform-origin: 0 100%; -moz-transform-origin: 0 100%; -ms-transform-origin: 0 100%; -o-transform-origin: 0 100%; transform-origin: 0 100%; }
+}
+@media only screen and (-webkit-device-pixel-ratio:1.5) {
+    .kline:after { width: 150%; height: 150%; -webkit-transform: scale(.6666); -moz-transform: scale(.6666); -ms-transform: scale(.6666); -o-transform: scale(.6666); transform: scale(.6666) }
+    .bline:after,
+    .tline:before { -webkit-transform: scaleY(.6666); -moz-transform: scaleY(.6666); -ms-transform: scaleY(.6666); -o-transform: scaleY(.6666); transform: scaleY(.6666) }
+    .lline:before,
+    .rline:before { -webkit-transform: scaleX(.6666); -moz-transform: scaleX(.6666); -ms-transform: scaleX(.6666); -o-transform: scaleX(.6666); transform: scaleX(.6666) }
+}
+@media only screen and (-webkit-device-pixel-ratio:3) {
+    .kline:after { width: 300%; height: 300%; -webkit-transform: scale(.3333); -moz-transform: scale(.3333); -ms-transform: scale(.3333); -o-transform: scale(.3333); transform: scale(.3333) }
+    .bline:after,
+    .tline:before { -webkit-transform: scaleY(.3333); -moz-transform: scaleY(.3333); -ms-transform: scaleY(.3333); -o-transform: scaleY(.3333); transform: scaleY(.3333) }
+    .lline:before,
+    .rline:before { -webkit-transform: scaleX(.3333); -moz-transform: scaleX(.3333); -ms-transform: scaleX(.3333); -o-transform: scaleX(.3333); transform: scaleX(.3333) }
+}
+
+/* 弹性盒模型 */
+.flex { position: relative; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.flex_item { -webkit-box-flex: 1; -ms-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }

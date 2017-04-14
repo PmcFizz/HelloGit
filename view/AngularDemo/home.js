@@ -4,7 +4,7 @@ var app=angular.module("app",["ui.router"]);
 // 		"ui.router"
 // 	])
 app.config(function($stateProvider,$urlRouterProvider){
-		$urlRouterProvider.otherwise("/home.html");
+		$urlRouterProvider.otherwise("/header");
 
 		$stateProvider
 			.state("header",{
@@ -14,7 +14,10 @@ app.config(function($stateProvider,$urlRouterProvider){
 
 			.state("content",{
 					url:"/content",
-					templateUrl:"./content.html"
+					templateUrl:"./content.html",
+					controller:function($scope){
+						$scope.things=11112123
+					}
 				})
 
 			.state("footer",{

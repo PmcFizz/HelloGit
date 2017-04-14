@@ -11,19 +11,47 @@
 		<div class="panel panel-success">
 			<div class="panel-body">
 				<div class="input-group  col-md-6">
-				<input type="text" class="form-control" ng-model="task">
+				<input type="text" class="form-control" ng-change="show=false" ng-model="task">
 				<span class="input-group-btn">
 					<button class="btn btn-primet" ng-click="add()">添加任务</button>
 				</span>
 			</div>
 			<h4 ng-if="tasks.length>2">任务列表</h4>
-			<ul class="list-group">
-				<li ng-repeat="item in tasks track by $index" class="list-group-item">
+			<ul class="list-group" >
+				<li ng-repeat="item in tasks track by $index" ng-click="isNow($index)" class="list-group-item">
 					{{item}}
 					<a ng-click="tasks.splice($index,1)">删除</a>
 				</li>
 			</ul>
+			<p ng-show="show">111111111</p>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>第1列</th>
+						<th>第2列</th>
+						<th>第3列</th>
+						<th>第4列</th>
+						<th><button class="btn btn-success" ng-click="addRow()">添加一行</button></th>
+					</tr>					
+				</thead>
+				<tbody>
+					<tr>
+						<td>这是11</td>
+						<td>这是12</td>
+						<td>这是13</td>
+						<td>这是14</td>
+						<td><button class="btn btn-danger" ng-click="delRow()">删除一行</button></td>
+					</tr>
+					<tr>
+						<td>这是21</td>
+						<td>这是22</td>
+						<td>这是23</td>
+						<td>这是24</td>
+						<td><button class="btn btn-danger" ng-click="delRow()">删除一行</button></td>
+					</tr>
+				</tbody>
 
+			</table>
 			</div>
 
 		</div>

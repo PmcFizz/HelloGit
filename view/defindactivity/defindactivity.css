@@ -1,0 +1,7 @@
+.wrap{width: 100%;position: fixed;bottom: 50px;height: 30px;}
+.btn{display: block;}
+.btn.centerbtn{height: 30px;width: 100px;margin: 0 auto; background-size: 100% 100%; background-color: transparent;border: none;}
+.btn.centerbtn.exchange-timeclub-btn{background-image: url("./timeclub/btn1.png");}
+.btn.centerbtn.exchange-citygym-btn{background-image: url("./citygym/btn.png");}
+.conatiner{position: relative;margin: 0 auto;top: 50%;margin-top: -60px;height: 120px;width: 100%;text-align: center;}
+.conatiner .qrcode{display: initial;}

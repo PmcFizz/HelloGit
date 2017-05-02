@@ -1,0 +1,41 @@
+<div ng-controller="BaseCtrl" >
+    <div class="wrapper-md" ng-controller="【1.子控制器】" ng-init="actionList()">
+    <tabset class="tab-container">
+        <tab>
+            <tab-heading>【2.标题】</tab-heading>
+            <div class="wrapper-md" >
+               <!-- <button class="btn m-b-xs w-xs btn-primary" ng-controller="ModalCtrl" ng-click="open('/views/vip/level/intro.html','','','md')">新增等级</button>-->
+                <div class="panel panel-default" >
+                    <div class="table-responsive" custom-grid-select>
+                        <table class="table table-striped b-t b-light">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>等级名称</th>
+                                <th>等级图标</th>
+                                <th>自动升级条件</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in datas">
+                                    <td>{{item.【3.元素名字】}}</td>
+                                    <td >
+                                        <label class="m-t-xs m-xs m-n">
+                                            <a class="pointer ng-scope" title="修改" ui-sref="【4.修改页面路由】({id:{{item.id}}})"><i class="icon-bianji bigger-140 text-decoration"></i></a>
+                                            <a class="pointer ng-scope" title="删除" ng-controller="DelCtrl" ng-click="open({{item.id}})">
+                                                <i class="icon-shanchu bigger-140 text-decoration"></i>
+                                            </a>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </tab>
+    </tabset>
+</div>
+<!-- / tab -->
+</div>

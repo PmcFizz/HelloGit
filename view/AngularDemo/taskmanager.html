@@ -21,7 +21,7 @@
 				<li ng-repeat="item in tasks track by $index" ng-click="isNow($index)" class="list-group-item">
 					{{item}}
 					<a ng-click="tasks.splice($index,1)">删除</a>
-				</li>
+				</li> 
 			</ul>
 			<p ng-show="show">111111111</p>
 			<table class="table table-bordered">
@@ -50,10 +50,23 @@
 						<td><button class="btn btn-danger" ng-click="delRow()">删除一行</button></td>
 					</tr>
 				</tbody>
-
 			</table>
 			</div>
+		</div>
 
+		<!--使用directive-->
+		<hello></hello>
+		
+		<pmc>
+			<br/>
+			<span>原始的内容</span>
+			<span>还会在这里</span>
+		</pmc>
+		<pmc>
+		</pmc>
+
+		<div ng-repeat="person in people">
+			{{person}}:<wkd></wkd>
 		</div>
 		
 

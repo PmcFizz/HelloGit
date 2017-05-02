@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>城市健身房</title>
+	<link rel="stylesheet" type="text/css" href="../../reset.css">
+	<link rel="stylesheet" type="text/css" href="defindactivity.css"> 	
+</head>
+<body>
+<img src="./citygym/1.png" width="100%" height="100%" id="backimg">
+<div class="wrap">
+	<button class="btn centerbtn exchange-citygym-btn" id="exchange"></button>	
+</div>
+
+
+<script type="text/javascript" src="../../response.js"></script>
+<script type="text/javascript">
+	var num=1;	
+	//使用 高宽 100% 的一张图片
+	var backimgele=document.getElementById("backimg");
+	backimgele.onclick=function(){
+		if(num<6){
+			num++;
+		}
+		backimgele.setAttribute("src","./citygym/"+num+".png");		
+	}
+
+	var exchangeBtn=document.getElementById("exchange");
+	exchangeBtn.onclick=function(){
+		alert("您已兑换!!!")
+	}
+</script>
+</body>
+</html>

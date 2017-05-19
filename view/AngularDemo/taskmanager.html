@@ -5,6 +5,21 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>this is my Angular Demo on company write</title>
 	<link rel="stylesheet" type="text/css" href="../../plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<style type="text/css">
+		[type="submit"] {
+		    position: absolute;
+		    clip: rect(0 0 0 0);
+		}
+		.btnred {
+		    display: inline-block;
+		    padding: 2px 12px;
+		    background-color: #cd0000;
+		    color: #fff;
+		    font-size: 14px;
+		    cursor: pointer;
+		}
+
+	</style>
 </head>
 <body>
 	<div ng-app="demo" ng-controller="myctrl" class="container">
@@ -13,7 +28,7 @@
 				<div class="input-group  col-md-6">
 				<input type="text" class="form-control" ng-change="show=false" ng-model="task">
 				<span class="input-group-btn">
-					<button class="btn btn-primet" ng-click="add()">添加任务</button>
+					<button class="btn btn-primet" ng-click="add('121'+people[0])">添加任务</button>
 				</span>
 			</div>
 			<h4 ng-if="tasks.length>2">任务列表</h4>
@@ -69,10 +84,14 @@
 			{{person}}:<wkd></wkd>
 		</div>
 		
+		<input id="t" type="submit">
+		<label class="btnred" for="t">提交</label>
+
 
 
 	</div>
 	<script type="text/javascript" src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
+	<script type="text/javascript" src="../../plugins/jquery/jquery-1.12.mini.js"></script>
 	<script type="text/javascript" src="taskmanager.js"></script>
 </body>
 </html>

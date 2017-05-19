@@ -1,9 +1,24 @@
 var demo=angular.module("demo",[]);
-demo.controller('myctrl',function($scope){
+demo.controller('myctrl',function($scope,$http){
 	$scope.task="";
 	$scope.tasks=[];
 	$scope.people=['wkd','mjh','zqy','zff']
-	$scope.add=function(){
+	$scope.add=function(str){
+		console.log(str);
+		$http.post('/223/45',{name:1,age:2},function(res){
+
+		});
+
+		$.ajax({
+			url:'/12/31',
+			type:"post",
+			data:{name:21,age:3},
+			dataType:"json",
+			contentType:"application/json;charset=UTF-8"
+			//Content-Type:text/html; charset=utf-8
+
+		})
+
 		$scope.tasks.push($scope.task);
 		$scope.task="";
 	};

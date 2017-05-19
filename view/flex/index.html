@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>flex 语法学习</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0}		
+		body{background-color: #fff;border:1px solid red;width:600px;margin: 0 auto;}
+		.flexbox{display: -webkit-flex;display: flex;}		
+		.row{flex-direction:row;}
+		.row-reverse{flex-direction:row-reverse;}
+		.column{flex-direction:column;}
+		.column-reverse{flex-direction: column-reverse}
+		.wrap{flex-wrap:wrap;}
+		.wrap-reverse{flex-wrap:wrap-reverse;}
+		.flex-flow{flex-flow: row-reverse wrap-reverse;}
+		.flex-start{justify-content: flex-start}
+		.flex-end{justify-content: flex-end}
+		.center{justify-content: center;}
+		.space-between{justify-content: space-between;}
+		.space-around{justify-content: space-around;}
+		.content{border:1px solid #6b3535;background-color:#eee}
+		.content.big{height: inherit;}
+		.content .item{width: 150px;height: 30px;line-height: 30px;background-color: #c5891a;margin: 2px;color: red}
+		.content.big .item{padding: 10px 2px;margin: 10px 2px}
+		.content .item.big{width: 30%}
+	</style>
+</head>
+<body>
+	<div class="flexbox content row">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>		
+	</div>
+
+	<div class="flexbox content row-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>		
+	</div>
+
+	<div class="flexbox content column">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>		
+	</div>
+	<div class="flexbox content column-reverse">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>		
+	</div>
+
+	<div class="flexbox content row">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>		
+		<div class="item big">4</div>		
+		<div class="item big">5</div>		
+	</div>
+
+	<div class="flexbox content row wrap">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>		
+		<div class="item big">4</div>		
+		<div class="item big">5</div>		
+	</div>
+	<div class="flexbox content row wrap-reverse">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>		
+		<div class="item big">4</div>		
+		<div class="item big">5</div>		
+	</div>
+	<div class="flexbox content flex-flow">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>		
+		<div class="item big">4</div>		
+		<div class="item big">5</div>		
+	</div>
+	<div class="flexbox content big flex-start">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>				
+	</div>
+	<div class="flexbox content big flex-end">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>				
+	</div>
+	<div class="flexbox content big center">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>				
+	</div>
+	<div class="flexbox content big space-between">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>				
+	</div>
+	<div class="flexbox content big space-around">
+		<div class="item big">1</div>
+		<div class="item big">2</div>
+		<div class="item big">3</div>				
+	</div>
+
+</body>
+</html>

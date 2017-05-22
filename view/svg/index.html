@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>SVG 示例</title>
+</head>
+<body>
+	<p>使用svg 画圆</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+	</svg>
+	<p><a href="my.svg">view my.svg</a></p>
+	<p>使用svg 画矩形</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<rect width="300"  height="100" rx="20" ry="20" style="fill:rgb(0,0,255);stroke-width:1;
+		fill-opacity:0.1;stroke-opacity:0.9;stroke: rgb(0,0,0);"/>
+	</svg>
+	<p>SVG 椭圆</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<ellipse cx="100" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"/>
+	</svg>
+
+	<p>Svg 直线</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0); stroke-width:2"/>
+	</svg>
+
+	<p>SVG 多边形</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1"/>
+	</svg>
+
+	<p>SVG 五角星</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<polygon points="100,10 40,180 190,60 10,60 160,180"
+		 style="fill:lime;stroke: purple;stroke-width:5;fill-rule: evenodd;"/>
+	</svg>
+
+	<p>SVG 曲线</p>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<polyline points="0,20 40,40 80,60 120,80 140,100 160,120" 
+		style="fill:none;stroke:black;stroke-width:3"/>
+	</svg>
+
+</body>
+</html>

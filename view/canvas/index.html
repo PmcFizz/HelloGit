@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Canvas教程</title>
+</head>
+<body>
+<canvas id="mycanvas" width="300" height="300">
+	
+</canvas>
+
+<script type="text/javascript">
+	var c=document.getElementById("mycanvas");
+	var ctx=c.getContext("2d");
+
+	ctx.fillStyle="rgb(200,0,0)";
+	ctx.fillRect(10,10,70,50);
+
+	ctx.fillStyle="rgba(0,0,200,0.5)";
+	ctx.fillRect(30,30,55,50); //填充矩形区域
+
+	ctx.strokeRect(10,10,100,200); //矩形区域
+
+	ctx.clearRect(15,12,20,30);//清空矩形
+
+	ctx.beginPath();
+	ctx.moveTo(100,100);
+	ctx.lineTo(150,75);
+	ctx.lineTo(170,120);
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc(75,75,50,0,Math.PI*2,true);
+	ctx.moveTo(110,75);
+
+	ctx.arc(75,75,35,0,Math.PI,false);
+	ctx.moveTo(65,65);
+	ctx.arc(60,65,5,0,Math.PI*2,true);
+	ctx.moveTo(95,65);
+	ctx.arc(90,65,5,0,Math.PI*2,true);
+	ctx.stroke();
+
+</script>
+</body>
+</html>

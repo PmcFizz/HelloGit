@@ -9,6 +9,7 @@ gulp.task("default",function(){
 		}
 	});
 
+	gulp.watch("view/**/**").on("create",browserSync.reload);
 	gulp.watch("index.html").on("change",browserSync.reload);
 	gulp.watch("view/**/**").on("change",browserSync.reload);
 	gulp.watch("public/**/**").on("change",browserSync.reload);

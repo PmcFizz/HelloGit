@@ -8,42 +8,39 @@
 		<title>Angularjs services  四种方法</title>
 	</head>
 
-	<body ng-app="app">
-		<div class="container" ng-controller="MyCtrl">			
-			<h1>{{msg}}</h1>
+	<body ng-app="myapp">
+		<div class="container">			
+			 
 
-			<mydirective></mydirective>			 
+			<mydirective></mydirective>	
+
+			<div mydirective></div>		 
 		</div>
 		<script src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
+		
 		<script type="text/javascript">
 			//装饰器
 			(function(){
-				'use strict';
-				angular.module('app')
-					   .directive('mydirective',mydirective);
+				angular.module('myapp',[])
+				       .directive('mydirective',mydirective);
 
 				function mydirective(){
 					return {
-						restrict:'E',
+						restrict:"E",
 						replace:true,
-						scope:{
-							lists:'='
-						},
-						template:'',
+						template:'<div>这是我的装饰器{{myname}}</div>',
+						scope:{},
 						link:function(scope,element,attrs){
-							
+							scope.myname="Fizz";
+							console.log(element);
+							console.log(attrs);
 						}
 					}
 				}
-			})
-
+				mydirective.$inject=[];
+			})() 
 		</script>
-		<script>
-			var app = angular.module("app", []);
-			app.controller('MyCtrl', function($scope) {
-					$scope.msg = "你好";					 
-			})
-		</script>
+		
 	</body>
 
 </html>

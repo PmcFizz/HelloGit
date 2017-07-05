@@ -13,42 +13,45 @@
 <div class="dad">
 	<div class="child"></div>
 </div>
+<a   href= "http://www.csdn.net"   onclick= "return   getURL(this.href) "> csdn </a> 
 
-<script type="text/javascript">
+<script type="text/javascript" src="../../plugins/jquery/jquery-1.12.mini.js"></script>
+<script type="text/javascript">	
+
 	//初步observe代码
-	// function observe(data){
-	// 	if(!data || typeof data !=='object'){
-	// 		return;
-	// 	}
-	// 	Object.keys(data).forEach(key =>{
-	// 		observeProperty(data,key,data[key])
-	// 	})
-	// }
+	function observe(data){
+		if(!data || typeof data !=='object'){
+			return;
+		}
+		Object.keys(data).forEach(key =>{
+			observeProperty(data,key,data[key])
+		})
+	}
 
-	// function observeProperty(obj,key,val){
-	// 	observe(val);
-	// 	Object.defineProperty(obj,key,{
-	// 		enumerable:true,
-	// 		configurable:true,
-	// 		get:function(){
-	// 			return val;
-	// 		},
-	// 		set:function(newVal){
-	// 			if(val ===newVal || (newVal!==newVal && val !==val)){
-	// 				return;
-	// 			}
-	// 			console.log('数据更新啦 ',val,"=>",newVal);
-	// 			val=newVal;
-	// 		}
-	// 	});
-	// }
+	function observeProperty(obj,key,val){
+		observe(val);
+		Object.defineProperty(obj,key,{
+			enumerable:true,
+			configurable:true,
+			get:function(){
+				return val;
+			},
+			set:function(newVal){
+				if(val ===newVal || (newVal!==newVal && val !==val)){
+					return;
+				}
+				console.log('数据更新啦 ',val,"=>",newVal);
+				val=newVal;
+			}
+		});
+	}
 
-	// var data={
-	// 	a:'hello'
-	// }
-	// observe(data);
+	var data={
+		a:'hello'
+	}
+	observe(data);
 
-	//初步Compile代码
+	初步Compile代码
 	function Compile(el,value){
 		this.$val=value;
 		this.$el=this.isElementNode(el) ? el :document.querySelectorr(el);

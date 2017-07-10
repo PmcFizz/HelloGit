@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>训练原生js</title>
+
+	<link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/animate.css/3.1.0/animate.min.css">
+
+	<style type="text/css">
+		html,body{width: 100%;height:100%}
+		#id19930212{
+			display: block;
+			position: fixed;
+			bottom: 50%;
+			right: 50%;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background-color: #CC3333;			
+			text-align: center;
+			font-size: 20px;
+			line-height: 20px;
+			color: #fff;
+			border: 1px solid #CC3300;
+		}		 
+		#id19930212:hover{
+			background-color:#fff;
+			color: #b13232;
+			border: 1px solid #FFCC66;
+		}
+		#id19930212 #menu1,#id19930212 #menu2,#id19930212 #menu3,#id19930212 #menu4{
+			/*display: none;*/
+			height: 70px;
+			width: 70px;
+			background-color: red;
+			position: absolute;			
+		}
+		#id19930212 #menu1{
+			top: -40px;
+			left: -40px;
+			border-radius: 70px 0 0 0 
+		}
+		#id19930212 #menu2{			 
+			top: -40px;
+			left: 30px;
+			border-radius: 0 70px 0 0 	
+		}
+		#id19930212 #menu3{			 
+			top: 40px;
+			left: 30px;
+			border-radius: 0 0 70px 0 	
+		}
+		#id19930212 #menu4{		 
+			top: 40px;
+			left: -40px;
+			border-radius: 0 0 0 70px 	
+		}
+		#id19930212:hover #menu1{
+			display: block;
+		}
+		#cone1,#cone2,#cone3,#cone4,#cone5,#cone6{
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-left:35px solid transparent;
+			border-right:35px solid transparent;
+			border-top:70px solid green;
+			border-radius: 50%;
+		}
+		#cone1{
+			bottom: 10px;
+			
+		}
+		#cone2{
+			bottom: -6px;
+			left: 23px;
+			transform:rotate(45deg);			
+		}
+		#cone3{
+			bottom: 50px;
+			
+		}
+		#cone4{
+			bottom: 70px;
+			
+		}
+		#cone5{
+			bottom: 90px;
+		
+		}
+		#cone6{
+			bottom: 110px;
+			
+		}
+		#mycirle{
+			margin-top: 300px;
+			margin-left: 100px;
+			height: 300px;
+			width: 300px;
+			border-radius: 50%;
+			background-color:yellowgreen;
+			background-image: linear-gradient(to right,transparent 50%,#655 0);
+			background: conic-gradient(yellowgreen 40%, gold 0 70%, #f06 0);
+			border-radius: 50%
+		}
+		#mycirle::before{
+			content:'';
+			display: block;			
+			margin-left: 50%;
+			height: 100%;
+			border-radius: 0 100% 100% 0/50%;
+			background:#655;
+			transform-origin: left; 
+			transform:rotate(.1turn);
+		}
+
+	</style>
+</head>
+<body>
+<div id="id19930212" class="animated wobble">
+    <!-- <div id="menu1"></div>
+	<div id="menu2"></div>
+	<div id="menu3"></div>
+	<div id="menu4"></div>  -->
+</div>
+
+<div id="mycirle" >
+	 
+</div>
+ 
+
+<script type="text/javascript">
+	// var wrapDiv=document.createElement("div");
+	// wrapDiv.id="mywrap";
+	// wrapDiv.className="wrap";
+	// wrapDiv.style.width="100%";
+	// wrapDiv.style.height="100%";
+	// wrapDiv.style.background="#b13232";
+	// wrapDiv.style.position="fixed";
+	// wrapDiv.style.zIndex="10000";
+	// // wrapDiv.appendChild(document.createTextNode("111111"));
+	// document.body.appendChild(wrapDiv);
+
+	// var div2=document.getElementById("div2");
+	// console.log(div2.parentNode);
+
+	// var div1=document.getElementById("div1");
+	// console.log(div1.childNodes);
+
+</script>
+</body>
+</html>

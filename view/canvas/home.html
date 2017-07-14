@@ -10,110 +10,52 @@
 			width: 100%;
 			padding: 0;
 			margin:0;
-		}
-		.footer{
-			width: 100%;
-			height: 40px;					
-			text-align: center;
-			position: fixed;
-			bottom: 20px;
-			margin: 0 auto;
-		}
-		.footer .name{
-			width: 200px;
-			height: 24px;
-			font-size: 24px;
-			line-height: 24px;
-			margin: 0 auto;
-			border: 1px solid #ddd;
-			padding: 10px 5px;
-			-moz-user-select:none;
-			-khtml-user-select:none;
-			user-select:none;
 		}		 
+		.righter{
+			width: 80px;
+			height: 100%;
+			position: fixed;
+			right: 0;
+			background-color: #ffeb89;
+			top:0;
+		}
+		.righter .menuul{
+			padding: 0;
+			margin: 0 auto;
+			list-style: none;
+			text-align: center;			
+		}
+		.righter .menuul:first-child{
+			margin-top: 20px
+		}
+		.righter .menuul li{
+			height: 40px;
+			line-height: 40px;
+			margin-top: 10px;
+			background-color:white;
+			color: black;
+			border-radius: 4px;
+			cursor:context-menu;
+			user-select:none;
+		}
+		.righter .menuul li:hover{			 
+			background-color:black;
+			color: white;
+		}
 	</style>
 </head>
 <body>
 <canvas height="100" width="100" id="mycan"></canvas>
-
-<div class="footer"><p class="name">刻舟求剑</p></div>
-<script type="text/javascript">
-	(function(){
-	var clientHeight=document.documentElement.scrollHeight;
-	var clientWidth=document.documentElement.scrollWidth;
-	var canvas=document.getElementById("mycan");
-	canvas.setAttribute("width",clientWidth-10);
-	canvas.setAttribute("height",clientHeight-10);
-	var ctx=canvas.getContext("2d");
-	ctx.fillStyle="yellowgreen";
-	ctx.fillRect(0,0,clientWidth,clientHeight);
-	ctx.lineWidth=10;
-	ctx.strokeStyle='black';
-	ctx.lineCap='round';
-	ctx.lineJoin='round';
-	ctx.shadowBlur=1;
-	ctx.shadowColor='black';
  
-	const point={};
-
-	const paint=(signal)=>{
-		switch(signal){
-			case 1:
-				ctx.beginPath();
-				ctx.moveTo(point.x,point.y);
-			case 2:
-				ctx.lineTo(point.x,point.y);
-				ctx.stroke();
-				break;
-		}
-	};
-
-	const isMobile=/(phone|pad|pod|iPhone|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fenenc|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(navigator.userAgent);
-
-	let pressed=false;
-	const create=signal=>(e)=>{
-		if(signal===1){
-			pressed=true;
-		}
-		if(signal===1 || pressed){
-			e=isMobile ?e.touches[0]:e;
-			point.x=e.clientX-left+0.5;
-			point.y=e.clientY-top+0.5;
-			paint(signal);
-		}
-	}
-
-	const {left ,top} =canvas.getBoundingClientRect();
-	const start=create(1);
-	const move=create(2);
-
-	const requestAnimationFrame=window.requestAnimationFrame;
-	const optimizedMove=requestAnimationFrame ? (e) =>{
-		requestAnimationFrame(()=>{
-			move(e);
-		});
-	}:move;
-
-	if(isMobile){
-		mycan.addEventListener('touchstart',start);
-		mycan.addEventListener('touchmove',optimizedMove);
-	}else{
-		mycan.addEventListener('mousedown',start);
-		mycan.addEventListener('mousemove',optimizedMove);
-		['mouseup','mouseleave'].forEach((event)=>{
-			mycan.addEventListener(event,()=>{
-				pressed=false;
-			});
-		});
-	}
-	let i=0;
-	const nameArr=["刻舟求剑","掩耳盗铃","农夫与蛇","我是傻逼"];
-	document.querySelector(".name").onclick=(ev)=>{
-		document.querySelector(".name").innerText=nameArr[i];		
-		i++;
-		i>3 ? i=0 : "";
-	}
-})();
-</script>
+<div class="righter">
+	<ul class="menuul">
+		<li class="muen_item" data-type="changetheme" id="theme">刻舟求剑</li>
+		<li class="muen_item" data-type="reset">清    屏</li>
+		<li class="muen_item" data-type="saveimg">保存截图</li>
+		<!-- <li class="muen_item" data-type="rotate">旋转90°</li> -->
+		<li class="muen_item" data-type="changebg">改变背景</li>
+	</ul>
+</div>
+<script type="text/javascript" src="home.js"></script>
 </body>
 </html>

@@ -98,7 +98,8 @@
             bigwall.style.display="none";
             clearInterval(interval);
         },false);
-         var clientHeight=document.documentElement.clientHeight,
+        
+        var clientHeight=document.documentElement.clientHeight,
             clientWidth=document.documentElement.clientWidth;
         var originX=clientWidth-20,originY=clientHeight-20;
 		var distanceY=0,distanceX=0;

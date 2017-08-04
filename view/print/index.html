@@ -5,12 +5,38 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>我的打印页面</title>
 	<style type="text/css">
-		
+	#fix_img_outerdiv{
+		height: 200px;
+		width: 200px;
+		background-color: #ddd;
+		position: fixed;
+		z-index: 999999999;
+	}
+	#fix_wrap_div{
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	#fix_wrap_div .btn{
+		position: absolute;
+		display: block;
+		vertical-align: middle;	
+		padding: 15px;
+		top: 50%;
+		margin-top: -5px;
+		background-color: red;
+		border-radius: 50%;
+	}
+	#fix_wrap_div .left{
+		left: 5px;	
+	}
+	#fix_wrap_div .right{
+		right: 5px;
+	}
 	</style>
 </head>
 <body>
-	<div>
-		
-	</div>
+	 
+	<script type="text/javascript" src="../../public/js/img.js"></script>	
 </body>
 </html>

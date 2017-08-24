@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: orange;
+    position: relative;
+    background: linear-gradient(to right, #2c3b4e, #4a688a, #2c3b4e);
+}
+
+.center {
+    background-color: #dedede
+}
+
+.center p {
+    line-height: 90px;
+    font-size: 20px;
+    border-left: 10px solid blue;
+    border-right: 10px solid blue
+}
+
+.progress {
+    height: 25px;
+    background: #262626;
+    padding: 5px;
+    overflow: visible;
+    border-radius: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #7992a8;
+    margin-top: 20px;
+}
+
+.progress-bar.active {
+    animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+
+.progress .progress-bar {
+    border-radius: 20px;
+    position: relative;
+}
+
+.progress-bar-info {
+    background-color: #5bc0de
+}
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+
+.progress .progress-value {
+    display: block;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #fff;
+    border-radius: 4px;
+    background: #191919;
+    border: 1px solid #000;
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+.progress .myprogress-bar {
+    float: left;
+    display: block;
+    font-size: 12px;
+    height: 25px;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgb(51, 122, 183);
+    border-radius: 20px;
+}
+
+.icon-wrap {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+.icon-wrap .icon {
+    display: block;
+    float: left;
+    width: 46px;
+    height: 46px;
+    background-image: url("icon.png");
+    background-size: 498px 919px;
+    margin-left: 5px;
+}
+
+.icon-1-1 {
+    background-position: -15px -17px;
+}
+
+.icon-1-2 {
+    background-position: -68px -17px;
+}
+
+.icon-1-3 {
+    background-position: -121px -17px;
+}
+
+.icon-1-4 {
+    background-position: -174px -17px;
+}
+
+.icon-1-5 {
+    background-position: -227px -17px;
+}
+
+.icon-1-6 {
+    background-position: -280px -17px;
+}
+
+.icon-1-7 {
+    background-position: -333px -17px;
+}
+
+.icon-1-8 {
+    background-position: -386px -17px;
+}
+
+.icon-1-9 {
+    background-position: -439px -17px;
+}

@@ -61,20 +61,114 @@ header {
     line-height: 30px;
 }
 
-.Searchbar {
+.SearchBar {
     display: flex;
 }
 
 .SearchBar-toolWrapper {
     position: relative;
-    z-index: 104;
+    z-index: 120;
     width: 326px;
 }
-.Searchbar-tool{
+.SearchBar-tool{
     position: relative;
     float: left;
     overflow: hidden;
 }
+.SearchBar-tool .Popover{
+    display: block;
+}
+.Input-wrapper.Input-wrapper--grey{
+    background: #f7f8fa;
+}
+.SearchBar-input{
+    width: 326px;
+    transition:width .2s ease,background .3s ease;
+}
+.Input-wrapper{
+    position: relative;
+    display: flex;
+    height: 34px;
+    padding: 4px 10px;
+    font-size: 14px;
+    border: 1px solid #e7eaf1;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input.Input{
+    line-height: 24px;
+    height: 24px;
+}
+.Input{
+    -webkit-box-flex:1;
+    flex:1;
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.Input-after{
+    position: absolute;
+    top:50%;
+    right: 10px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack:center;
+    justify-content: center;
+    margin:auto;
+    transform: translate3d(0,-50%,0);
+}
+
+Button.Searchbar-searchIcon{
+    position: absolute;
+    right: -11px;
+    top:-17px;
+    bottom: -17px;
+    background:transparent ;
+    border: transparent;
+    padding: 0 12px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    transition: fill .3s ease;
+}
+
+.Button--primary.Button--blue{
+    background: #0f88eb;
+    color: #fff;
+}
+.AppHeader-userInfo{
+    -webkit-box-flex:1;
+    flex:1;
+    -weblit-box-pack:end;
+    justify-content: flex-end;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.AppHeader-messages,.AppHeader-notifications{
+    margin-right: 40px;
+}
+
+.Messages-icon{
+    cursor: pointer;
+}
+
+.AppHeader-profileAvatar{
+    vertical-align: top;
+}
+
+
+
 
 .Button--primary.Button--blue {
     background: #0f88eb;
@@ -84,7 +178,7 @@ header {
     color: #fff;
 }
 
-.Searchbar-askButton {
+.SearchBar-askButton {
     z-index: 103;
     padding: 0 14px;
     margin-left: 16px;

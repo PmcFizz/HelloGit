@@ -22,8 +22,9 @@
     },
     methods: {
       clickBtn () {
-//        alert(this.title)
-        // TODO 触发全局事件
+        // 此处尝试修改arrData
+        this.arrDate = [{name: '你'}, {name: '真'}, {name: '棒'}]
+        this.$emit('changeArrData', this.arrDate)
         this.$emit('msgFunc')
       }
     }

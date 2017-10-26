@@ -6,7 +6,8 @@ gulp.task("default",function(){
 	browserSync.init({
 		server:{
 			baseDir:"./"
-		}
+		},
+        port:8050
 	});
 
 	gulp.watch("view/**/**").on("create",browserSync.reload);

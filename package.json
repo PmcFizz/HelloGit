@@ -4,11 +4,14 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "async": "^2.5.0",
     "browser-sync": "^2.18.8",
+    "cheerio": "^1.0.0-rc.2",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "superagent": "^3.8.0"
   },
   "devDependencies": {},
   "scripts": {

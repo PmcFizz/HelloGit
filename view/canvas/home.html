@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>我的Canvas画板</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin:0;
+		}		 
+		.righter{
+			width: 80px;
+			height: 100%;
+			position: fixed;
+			right: 0;
+			background-color: #ffeb89;
+			top:0;
+		}
+		.righter .menuul{
+			padding: 0;
+			margin: 0 auto;
+			list-style: none;
+			text-align: center;			
+		}
+		.righter .menuul:first-child{
+			margin-top: 20px
+		}
+		.righter .menuul li{
+			height: 40px;
+			line-height: 40px;
+			margin-top: 10px;
+			background-color:white;
+			color: black;
+			border-radius: 4px;
+			cursor:context-menu;
+			user-select:none;
+		}
+		.righter .menuul li:hover{			 
+			background-color:black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<canvas height="100" width="100" id="mycan"></canvas>
+ 
+<div class="righter">
+	<ul class="menuul">
+		<li class="muen_item" data-type="changetheme" id="theme">刻舟求剑</li>
+		<li class="muen_item" data-type="reset">清    屏</li>
+		<li class="muen_item" data-type="saveimg">保存截图</li>
+		<!-- <li class="muen_item" data-type="rotate">旋转90°</li> -->
+		<li class="muen_item" data-type="changebg">改变背景</li>
+	</ul>
+</div>
+<script type="text/javascript" src="home.js"></script>
+</body>
+</html>

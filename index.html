@@ -7,6 +7,11 @@
 		<title>主页面入口12312</title>
 		<link rel="stylesheet" href="plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="test.css" />
+		<style type="text/css">
+			#mydiv:hover{
+				cursor: move;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -64,14 +69,53 @@
 				<h1 class="text-center"><a href="view/flex/home.html">第二次flex布局</a></h1> 
 				<h1 class="text-center"><a href="view/angularjs/direc.html">Angular direc</a></h1> 
 				<h1 class="text-center"><a href="view/bookmarks_2017_6_15.html">bookmarks_2017_6_15.html</a></h1> 
+				<h1 class="text-center"><a href="view/canvas/home.html">home.html</a></h1> 
+
+				<h1 class="text-center"><a href="view/originjs/Elaine.html">Elaine.html</a></h1> 
 			</div>			
 		</div>
- 
-		<script>
-			//console.log(473313017990+"zhehsi");
-			console.log(new Date().getTime());
-		</script>
+		<script type="text/javascript">
+			//生成一个包含start 和end 的随机数
+			function getRnadomNum(start,end){
+			   //Math.random() 获取[0,1) 的随机数	
+			   return parseInt(Math.random()*(end-start)+start,10)
+			}
+			console.log(parseInt(getRnadomNum(1,14),10));
 
+			var div=document.createElement("div");
+			div.id="mydiv"
+			div.style.width="100px";
+			div.style.height="100px";
+			div.style.backgroundColor="yellowgreen";
+			div.style.position="fixed";
+			div.style.bottom="100px";
+			div.style.right="100px";
+			div.setAttribute("draggable",true);
+			document.body.appendChild(div);
+
+			var clientHeight=document.documentElement.clientHeight,
+	            clientWidth=document.documentElement.clientWidth;
+	        var originX=clientWidth-100,originY= clientHeight-100;
+			var distanceY=0,distanceX=0;
+
+
+			div.addEventListener("dragstart",function(e){
+				distanceY=e.clientY-originY;
+				distanceX=e.clientX-originX;
+			});
+
+			div.addEventListener("drag",function(even){		 
+				if (even.clientX==0 || even.clientY==0) {
+					return;
+				}
+				originX=even.clientX-distanceX;
+				originY=even.clientY-distanceY;
+				div.style.right=clientWidth-originX+"px";
+				div.style.bottom=clientHeight- originY+"px";
+			});
+
+		</script>
+ 
 	</body>
 
 </html>

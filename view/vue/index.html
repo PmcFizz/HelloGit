@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+</head>
+<body>
+    <div id="app">
+        <p>以下是通过路由注入的内容</p>
+        <p>
+            <router-link to="/content">go content view</router-link>
+            <router-link to="/header">go header view</router-link>
+            <router-link to="/footer">go footer view</router-link>
+        </p>
+        <router-view></router-view>                     
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script type="text/javascript">
+       const Content={template:'<div>Content</div>'}
+       const Header={template:'<div>Header</div>'}
+       const Footer={template:'<div>Footer</div>'}
+
+       const routes=[
+            {path:'/content',component:Content},
+            {path:'/header',component:Header},
+            {path:'/footer',component:Footer}
+       ]
+
+       const router=new VueRouter({
+            routes
+       })
+
+       const app=new Vue({
+        router 
+       }).$mount('#app')
+
+    </script>
+</body>
+</html>

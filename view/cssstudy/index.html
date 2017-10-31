@@ -1,135 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"  content="width=device-width,initial-scale=1.0">
-	<title>css study</title>
-	<style type="text/css">
-		*{margin: 0;padding: 0}
-		html,body{height: 100%;width: 100%;margin: 0;padding: 0}
-		.container{
-			width: 300px;
-			height: 300px;
-			text-align: center;				 		
-			margin: 0 auto;
-			background-color: orange;
-			position: relative;
-			top: 10%;			
-			background: linear-gradient(to right, #2c3b4e, #4a688a, #2c3b4e);			
-		}
-		.center{
-			/*height: 100px;*/
-			/*padding: 10px 0px;*/
-			background-color: #dedede
-		}
-		.center p{
-			line-height: 90px;
-			font-size: 20px;			
-			border-left: 10px solid blue;
-			border-right: 10px solid blue
-		}
-
-		.progress{
-			height: 25px;
-			background: #262626;
-			padding: 5px;
-			overflow: visible;
-			border-radius:20px;
-			border-top: 1px solid #000;
-			border-bottom: 1px solid #7992a8;
-			margin-top: 50px;
-		}
-		.progress-bar.active{
-			animation:reverse progress-bar-stripes 0.40s linear infinite,animate-positive 2s;
-		}
-		.progress .progress-bar{
-			border-radius:20px;
-			position: relative;
-			animation: animate positive 2s;
-		}
-		.progress-bar-info{
-			background-color: #5bc0de
-		}
-		.progress-bar-striped{
-			background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)
-			background-size:40px 40px;
-		}
-		 
-		.progress .progress-value{
-			display: block;
-			padding: 3px 7px;
-			font-size: 13px;
-			color: #fff;
-			border-radius: 4px;
-			background:#191919;
-			border: 1px solid #000;
-		}
-		.progress-bar {
-		    float: left;
-		    width: 0;
-		    height: 100%;
-		    font-size: 12px;
-		    line-height: 20px;
-		    color: #fff;
-		    text-align: center;
-		    background-color: #337ab7;
-		    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-		    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
-		    -webkit-transition: width .6s ease;
-		    -o-transition: width .6s ease;
-		    transition: width .6s ease;
-		}
-		.progress .myprogress-bar{
-			float: left;
-			display: block;
-			font-size: 12px;
-			height: 25px;
-			position:relative;
-			text-align: center;
-			line-height: 20px;
-			background-color: rgb(51,122,183);
-			border-radius: 20px;
-			/*
-			animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
-			transition: width .6s ease;
-			background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);*/
-		}
-
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>css study</title>
+    <link href="index.css" rel="stylesheet"/>
 </head>
 <body>
-	
-	<div class="container">
-		 		
-	</div>
+<div class="container">
+    <h1 style="color: #6b3535">浪里撷花,赠与美人</h1>
+    <h1 style="color: #6b3535">慨当以慨,不可断绝</h1>
+    <div class="icon-wrap">
+        <i class="icon icon-1-1"></i>
+        <i class="icon icon-1-2"></i>
+        <i class="icon icon-1-3"></i>
+        <i class="icon icon-1-4"></i>
+        <i class="icon icon-1-5"></i>
+        <i class="icon icon-1-6"></i>
+        <i class="icon icon-1-7"></i>
+        <i class="icon icon-1-8"></i>
+        <i class="icon icon-1-9"></i>
+        <i class="icon icon-2-1"></i>
+        <i class="icon icon-3-1"></i>
+        <i class="icon icon-4-1"></i>
 
-	<div class="container">
-		<div class="center">
-			<p>这应该是居中的</p>
-		</div>		
-	</div>
+    </div>
 
-	<div class="container">		
-		<div class="progress">
-			<div class="progress-bar progress-bar-info progress-bar-striped active" style="width:85%">
-				 
-			</div>
-		</div>
 
-		<div class="progress">
-			<div class="myprogress-bar" style="width: 50%"></div>
-		</div>
-	</div>
 
-	<label><input type="checkbox" name="" id="mycheck" onchange="myfun()">wode checkbox</label>
-	<script type="text/javascript" src="../../plugins/jquery/jquery-1.12.mini.js"></script>
-	<script type="text/javascript">
-		function myfun() {
-			if(!confirm("确定修改?")){
-				console.log(11)
-				$("#mycheck").prop("checked",!$("#mycheck").prop("checked"))
-			}
-		}
-	</script>
+</div>
+
+<script type="text/javascript" src="../../plugins/jquery/jquery-1.12.mini.js"></script>
+<script type="text/javascript">
+    function myfun() {
+
+    }
+</script>
 </body>
 </html>

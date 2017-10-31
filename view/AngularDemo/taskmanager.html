@@ -87,9 +87,14 @@
 		<input id="t" type="submit">
 		<label class="btnred" for="t">提交</label>
 
-
+		<p ng-repeat="s in menuTree | menuFilter1">{{s.functionName}}<br>
+		<!-- menuFilter2 : menuTree : s.functionId -->
+		<span style="color: blue" ng-repeat="m in menuTree | filter :{functionPId:s.functionId} ">{{m.functionName}}&nbsp;</span>
+		</p>
 
 	</div>
+
+
 	<script type="text/javascript" src="../../plugins/angularjs/angular.1.4.6.min.js"></script>
 	<script type="text/javascript" src="../../plugins/jquery/jquery-1.12.mini.js"></script>
 	<script type="text/javascript" src="taskmanager.js"></script>

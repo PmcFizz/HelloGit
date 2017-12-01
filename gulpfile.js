@@ -10,8 +10,8 @@ gulp.task("default",function(){
         port:8050
 	});
 
-	gulp.watch("view/**/**").on("create",browserSync.reload);
-	gulp.watch("index.html").on("change",browserSync.reload);
-	gulp.watch("view/**/**").on("change",browserSync.reload);
-	gulp.watch("public/**/**").on("change",browserSync.reload);
+	// gulp.watch("view/**/**").on("create",browserSync.reload);
+	// gulp.watch("index.html").on("change",browserSync.reload);
+	gulp.watch("view/cssstudy/**/**").on("change",browserSync.reload);
+	// gulp.watch("public/**/**").on("change",browserSync.reload);
 })

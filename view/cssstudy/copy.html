@@ -13,14 +13,16 @@
         .menu-ul li{float: left;margin:0px 5px;height: 48px;vertical-align: middle;}
         .menu-ul li a{padding: 13px;display: block;line-height:20px;font-size: 18px;vertical-align: middles; }
 
-        .text-center{text-align: center;}
+        .text-center{text-align: center;margin:0 auto;}
         .page-title{height: 30px;line-height: 30px;font-size: 30px;}
         .row{margin-top: 20px;width: 100%}
         .row-input{line-height: 20px;height: 20px;padding:10px 5px;font-size: 20px ;border-radius: 4px;outline: none;border: 1px solid #ddd;width: 200px;display: block;margin:0 auto;}
         .input-group{height: 42px;margin:0 auto;text-align: center;width: 200px}
         .input-group .row-input{width: 80px;float: left;margin:0 auto;}
         .input-group .add-span{display: block;float: left;height: 100%;vertical-align: middle;line-height: 42px}
-
+        .btn{display: block;width: 200px;height: 40px;border: 1px solid #ddd; border-radius: 4px;font-size: 20px}
+        .btn-success{color: #fff;background-color: #5cb85c}
+        .btn-center{margin:0 auto;}
     </style>
 </head>
 <body>
@@ -32,13 +34,16 @@
 
     <div class="row text-center">
         <div class="input-group">
-            
             <input type="text-align" class="row-input" name="" placeholder="开始页">
             <span class="add-span">→</span>
-            <input type="text-align" class="row-input" name="" placeholder="结束页">
-        
+            <input type="text-align" class="row-input" name="" placeholder="结束页">    
         </div>        
     </div>
+
+    <div class="row text-center">
+        <button class="btn btn-success btn-center">提交</button>
+    </div>
+
       <div class="menu">
         <ul class="menu-ul">
             <li><a>CSS3</a></li>

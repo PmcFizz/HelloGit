@@ -74,3 +74,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /.idea/workspace.xml
+bower_components/*
+

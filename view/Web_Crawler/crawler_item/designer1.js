@@ -1,3 +1,6 @@
+/**
+获取各个设计师的部分作品
+**/
 const superagent = require("superagent");
 const fs = require("fs");
 const cheerio = require("cheerio");

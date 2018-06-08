@@ -185,3 +185,48 @@ page {
     text-align: center;
     color: #999;
 }
+.weui-navbar {
+    background-color: white;
+    border-bottom: none;
+    font-size: 30rpx;
+    position: relative;
+}
+
+.weuiitem {
+    width: 25%;
+    padding: 15rpx;
+    text-align: center;
+}
+
+.weuiitem.weui-bar__item_on {
+    color: #ED414A;
+}
+
+.weui-navbar__slider {
+    background-color: #ED414A;
+    width: 120rpx;
+    height: 5rpx;
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0rpx;
+}
+
+.content_liulan1 {
+    width: 100%;
+    height: 55rpx;
+    padding: 1rpx;
+    background-color: #F2F2F2;
+    display: flex;
+    margin-top: 30rpx;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26rpx;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.bjsc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

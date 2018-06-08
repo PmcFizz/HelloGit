@@ -1,0 +1,102 @@
+<view class="font">
+    <view class="search">
+        <input class="search_inp" placeholder="后台可自定义" placeholderStyle="color:#999;" type="text"></input>
+        <image class="search_img" src="../image/sousuo.png"></image>
+    </view>
+    <view class="marry">
+        <scroll-view scrollX="true" style="padding-right:30rpx;">
+            <view class="luntext" scrollX="true">
+                <view class="luntext_Item_text" wx:for="{{luntext}}" wx:key="unique">
+                {{item.ctext}}
+              </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view class="nav-box">
+    <view class="nav-detial">家具</view>
+    <view class="nav-detial">电子数码</view>
+    <view class="nav-detial">办公用品</view>
+    <view class="nav-detial">家用百货</view>
+    <view class="nav-detial">服饰</view>
+    <view class="nav-detial">服饰</view>
+</view>
+<view class="markets">
+    <view class="marketinfo">
+        <image class="market-logo" src="../image/comment.png"></image>
+        <view class="market-title">王王王王王王王</view>
+        <button class="serve">电子数码</button>
+        <image class="tel" src="../image/tel.png"></image>
+    </view>
+    <view class="marketintro">随身时间发克拉打扫房间就开了第三方价格，.....<view class="imgnum">[4图]</view>
+    </view>
+    <view class="marketimg">
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+    </view>
+    <view class="new">七成新</view>
+    <view class="view">
+        <view class="viewtime">16小时前发布</view>
+        <view class="more">查看详情 >></view>
+        <view class="kuang"></view>
+        <view class="viewnum">
+            <image class="views" src="../image/view.png"></image>
+            <view class="viewsnum">888</view>人浏览
+    <image class="zan" src="../image/zan.png"></image>
+            <view class="zannum">888</view>人点赞
+    </view>
+    </view>
+</view>
+<view class="markets">
+    <view class="marketinfo">
+        <image class="market-logo" src="../image/comment.png"></image>
+        <view class="market-title">王王王王王王王</view>
+        <button class="serve">电子数码</button>
+        <image class="tel" src="../image/tel.png"></image>
+    </view>
+    <view class="marketintro">随身时间发克拉打扫房间就开了第三方价格，.....<view class="imgnum">[4图]</view>
+    </view>
+    <view class="marketimg">
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+        <image src="../image/comment.png"></image>
+    </view>
+    <view class="new">七成新</view>
+    <view class="view">
+        <view class="viewtime">16小时前发布</view>
+        <view class="more">查看详情 >></view>
+        <view class="kuang"></view>
+        <view class="viewnum">
+            <image class="views" src="../image/view.png"></image>
+            <view class="viewsnum">888</view>人浏览
+    <image class="zan" src="../image/zan.png"></image>
+            <view class="zannum">888</view>人点赞
+    </view>
+    </view>
+</view>
+<view class="tab-space"></view>
+<view class="tab">
+    <view>
+        <image src="../image/home.png"></image>
+        <view>首页</view>
+    </view>
+    <view>
+        <image src="../image/dianpu.png"></image>
+        <view>商家</view>
+    </view>
+    <view>
+        <image src="../image/send.png"></image>
+        <view>发布</view>
+    </view>
+    <view>
+        <image src="../image/bag.png"></image>
+        <view>红包</view>
+    </view>
+    <view>
+        <image src="../image/wode.png"></image>
+        <view>我的</view>
+    </view>
+</view>

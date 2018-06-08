@@ -1,0 +1,33 @@
+<view class="yelist" wx:if="{{yellow_list.length!=0}}">
+<view bindtap="yellow_info" class="yellow_list" data-id="{{item.id}}" wx:for="{{yellow_list}}">
+        <view class="list_head">
+            <view class="rel">
+                <image class="ab ud yellow_logo" mode="aspectFill" src="{{url}}{{item.logo}}"></image>
+            </view>
+            <view class="list">
+                <view>{{item.company_name}}</view>
+                <view>
+                    <image mode="aspectFill" src="../image/dianhuahong.png"></image>
+                    <text>{{item.link_tel}}</text>
+                </view>
+            </view>
+            <view class="rel tel_icon">
+                <view class="ab ud">
+                    <image class="ab udlr yellow_tel" mode="aspectFill" src="../image/phone1.gif"></image>
+                </view>
+            </view>
+        </view>
+        <view class="list_body">
+            <image mode="aspectFill" src="../image/address3.png"></image>
+            <text>{{item.company_address}}</text>
+            <text wx:if="{{item.distance!='NaN'}}">{{item.distance}}km</text>
+            <text wx:else>0.00km</text>
+        </view>
+    </view>
+</view>
+<view class="none" wx:else>
+    <view>
+        <image class="ab lr" mode="aspectFill" src="../image/tie2.png"></image>
+    </view>
+    <view>暂无电话信息</view>
+</view>

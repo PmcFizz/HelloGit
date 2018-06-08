@@ -1,0 +1,83 @@
+<view class="container rel">
+    <view class="header">
+        <view bindtap="header" class="{{activeIndex==index?'settled':'none_settled'}}" id="{{index}}" wx:for="{{header}}" wx:key="{{item.value}}">{{item}}</view>
+    </view>
+    <view class="body" hidden="{{activeIndex!=0}}" wx:for="{{slide}}" wx:key="*this">
+        <view class="head line margin">
+            <view class="fl">已抢{{item.honglist.length}}/{{item.hb_num}}份，共
+          <text wx:if="{{item.price<=item.moneys}}">{{item.price}}</text>
+                <text wx:else>{{item.moneys}}</text>
+      /{{item.moneys}}元</view>
+            <view class="fr">
+                <text wx:if="{{item.rob==false}}">已经结束</text>
+                <text wx:if="{{item.rob==true}}">进行中</text>
+            </view>
+        </view>
+        <view class="info">
+            <view class="line margin">{{item.details}}</view>
+            <view class="images" wx:if="{{item.img.length!=1}}">
+                <image mode="aspectFill" src="{{url}}{{item}}" wx:for="{{item.img}}" wx:key="*this"></image>
+            </view>
+        </view>
+        <view class="head line margin">
+            <view class="fl">{{item.time}}发布</view>
+            <view bindtap="redinfo" class="fr" data-id="{{item.id}}">查看详情>></view>
+        </view>
+    </view>
+    <view class="body" hidden="{{activeIndex!=1}}" wx:for="{{slide1}}" wx:key="*this">
+        <view class="head line margin">
+            <view class="fl">已抢{{item.honglist.length}}/{{item.hb_num}}份，共{{item.price}}/{{item.moneys}}元</view>
+            <view class="fr">
+                <text wx:if="{{item.rob==false}}">已经结束</text>
+                <text wx:if="{{item.rob==true}}">进行中</text>
+            </view>
+        </view>
+        <view class="info">
+            <view class="line margin">{{item.details}}</view>
+            <view class="images" wx:if="{{item.img[0]!=''}}" wx:for="{{item.img}}">
+                <image mode="widthFix" src="{{url}}{{item}}"></image>
+            </view>
+        </view>
+        <view class="head line margin">
+            <view class="fl">{{item.time}}发布</view>
+            <view bindtap="redinfo" class="fr" data-id="{{item.id}}">查看详情>></view>
+        </view>
+    </view>
+    <view class="body" hidden="{{activeIndex!=2}}" wx:for="{{slide2}}" wx:key="*this">
+        <view class="head line margin">
+            <view class="fl">已抢{{item.honglist.length}}/{{item.hb_num}}份，共{{item.price}}/{{item.moneys}}元</view>
+            <view class="fr">
+                <text wx:if="{{item.rob==false}}">已经结束</text>
+                <text wx:if="{{item.rob==true}}">进行中</text>
+            </view>
+        </view>
+        <view class="info">
+            <view class="line margin">{{item.details}}</view>
+            <view class="images" wx:if="{{item.img[0]!=''}}" wx:for="{{item.img}}" wx:key="*this">
+                <image mode="widthFix" src="{{url}}{{item}}"></image>
+            </view>
+        </view>
+        <view class="head line margin">
+            <view class="fl">{{item.time}}发布</view>
+            <view bindtap="redinfo" class="fr" data-id="{{item.id}}">查看详情>></view>
+        </view>
+    </view>
+    <view class="lr none" hidden="{{activeIndex!=0}}" wx:if="{{slide.length==0}}">
+        <image mode="aspectFill" src="../image/none_welfare.png"></image>
+        <view>没找到您发的福利，
+      <text bindtap="fabu">发布福利</text>
+        </view>
+    </view>
+    <view class="lr none" hidden="{{activeIndex!=1}}" wx:if="{{slide1.length==0}}">
+        <image mode="aspectFill" src="../image/none_welfare.png"></image>
+        <view>没找到您发的福利，
+      <text bindtap="fabu">发布福利</text>
+        </view>
+    </view>
+    <view class="lr none" hidden="{{activeIndex!=2}}" wx:if="{{slide2.length==0}}">
+        <image mode="aspectFill" src="../image/none_welfare.png"></image>
+        <view>没找到您发的福利，
+      <text bindtap="fabu">发布福利</text>
+        </view>
+    </view>
+</view>

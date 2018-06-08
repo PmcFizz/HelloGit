@@ -1,0 +1,170 @@
+.header {
+    height: 500rpx;
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+
+.notice {
+    width: 100%;
+    height: 50rpx;
+    position: fixed;
+    top: 200rpx;
+    z-index: 1000;
+    left: 0;
+}
+
+.notice>view:nth-child(1) {
+    position: absolute;
+    top: 0;
+    width: 55%;
+    border-radius: 20rpx;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+}
+
+.notice>view:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    z-index: 1200;
+    position: absolute;
+    top: 0;
+    font-size: 22rpx;
+    line-height: 50rpx;
+}
+
+.notice>view swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.notice>view swiper-item text {
+    vertical-align: top;
+    text-align: center;
+}
+
+.notice>view swiper-item {
+    width: 45%;
+    height: 100%;
+    color: #fff;
+    margin-left: 5%;
+}
+
+.header_back {
+    height: 500rpx;
+    width: 100%;
+    position: absolute;
+    left: 0rpx;
+    top: 0rpx;
+}
+
+.header_con {
+    width: 86%;
+    height: 120rpx;
+    position: absolute;
+    left: 0rpx;
+    bottom: 20rpx;
+    padding: 0rpx 50rpx;
+    color: white;
+}
+
+.no_info {
+    width: 100%;
+    height: 800rpx;
+    background: #fff;
+}
+
+.no_info image {
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 200rpx;
+}
+
+.header_text {
+    text-align: center;
+}
+
+.header_font1 {
+    font-size: 30rpx;
+}
+
+.header_font2 {
+    font-size: 26rpx;
+}
+
+.banner {
+    background-color: white;
+    border-bottom: 1rpx solid #eee;
+    padding: 20rpx;
+    display: flex;
+}
+
+.banner_tou {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.banner_right {
+    margin-left: 20rpx;
+    width: 600rpx;
+}
+
+.banner_top {
+    font-size: 26rpx;
+}
+
+.banner_title {
+    color: #4D5E7A;
+}
+
+.liulan {
+    width: 35rpx;
+    height: 20rpx;
+    margin-right: 10rpx;
+}
+
+.liulantext {
+    color: #666;
+}
+
+.banner_kan {
+    width: 120rpx;
+}
+
+.banner_content {
+    margin-top: 15rpx;
+    font-size: 26rpx;
+    color: #666;
+    line-height: 40rpx;
+}
+
+.banner_img {
+    margin-top: 15rpx;
+}
+
+.banner_img>image {
+    width: 139rpx;
+    height: 139rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.banner_botimg {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.banner_bot {
+    font-size: 24rpx;
+}
+
+.redbag {
+    color: #ED414A;
+}
+
+.redbag_money {
+    color: #ED414A;
+}

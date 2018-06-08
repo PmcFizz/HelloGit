@@ -1,0 +1,215 @@
+<view class="receive rel" wx:if="{{receive==true}}">
+    <view bindtap="receive1"></view>
+    <view class="ab udlr" style="height:\"{{height}};width:{{width}}\"">
+        <image mode="widthFix" src="../../image/receive.png"></image>
+    </view>
+</view>
+<view class="redinfo">
+    <view class="header">
+        <image class="header_back" mode="aspectFill" src="../../image/redbag2.png"></image>
+    </view>
+    <view class="section">
+        <view class="section_top flex-bet">
+            <view class="flex-center">
+                <image class="section_topimg" mode="aspectFill" src="{{store.user_img}}" wx:if="{{store.store_id=='0'}}"></image>
+                <image class="section_topimg" mode="aspectFill" src="{{url}}{{store.logo}}" wx:else></image>
+                <view>
+                    <view class="title">{{store.user_name}}撒了{{store.hb_money}}元</view>
+                    <view class="section_ren">人气：
+            <text class="section_num">{{store.views}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="content">{{store.details}}</view>
+        <view class="content_img" wx:if="{{store.img!=''}}">
+            <image mode="widthFix" src="{{url}}{{item}}" wx:for="{{store.img}}"></image>
+        </view>
+        <view class="content_ling" wx:if="{{store.hb_keyword!=''}}">口令：
+      <text class="section_num">{{store.hb_keyword}}</text>
+        </view>
+        <view class="content_count">
+      已抢
+      <text class="section_num">{{hongbao_len}}</text>/{{store.hb_num}}份，共计
+      <text class="section_num" wx:if="{{hongbao_len<store.hb_num}}">{{z_money}}</text>
+            <text class="section_num" wx:else>{{store.hb_money}}</text>
+            <text> /{{store.hb_money}}元</text>
+        </view>
+    </view>
+    <view class="user" wx:for="{{hongbao}}">
+        <view class="user_list flex-bet">
+            <view class="user_text flex-center">
+                <image class="user_img" src="{{item.img}}"></image>
+                <view class="user_name gobyndsingle">{{item.name}}</view>
+            </view>
+            <view class="flex-center">
+                <image class="user_moimg" src="../../image/cost.png"></image>
+                <view class="section_num">{{item.money}}元</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="portrait_ctop flex-bet">
+    <view class="flex-center">
+        <view class="portrait_cxian"></view>
+        <view class="portrait_com">评论</view>
+    </view>
+</view>
+<view class="userwords" wx:for="{{criticism}}">
+    <image class="userwords_img" src="{{item.user_img}}"></image>
+    <view class="userwords_rit">
+        <view class="flex-bet">
+            <view>
+                <view class="userwords_color gobyndsingle">{{item.name}}</view>
+                <view class="userwords_color2">{{item.time}}</view>
+            </view>
+            <view bindtap="reply1" class="userwords_color" data-name="{{item.name}}" data-reflex_id="{{item.id}}">回复</view>
+        </view>
+        <view class="userwords_content">
+      {{item.details}}
+    </view>
+        <view class="userwords_box" wx:if="{{item.reply!=''}}">
+            <view class="kuangs"></view>
+            <view class="userwords_one">
+                <text class="userwords_color">{{user_name}}</text>
+                <text bindtap="reflex" class="userwords_mar">回复</text>
+                <text class="userwords_color">{{item.name}}</text>
+                <text>：</text>
+                <text>{{item.reply}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="no_comment" wx:if="{{criticism.length==0}}">
+    <image mode="widthFix" src="../../image/back.png" style="width:60%;height:150rpx;margin-left:20%;"></image>
+    <view style="width:100%;height:40rpx;line-height:20rpx;font-size:24rpx;text-align:center">还没有任何评论哦~</view>
+</view>
+<view class="footer" wx:if="{{store.store_id!='0'}}">
+    <view bindtap="shouye" class="rel">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/index.png"></image>
+        </view>
+        <view class="nav_title center">首页</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+    <view bindtap="phone" class="rel">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/lxtel.png"></image>
+        </view>
+        <view class="nav_title center">电话</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+    <view bindtap="comment" class="rel">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/nav.png"></image>
+        </view>
+        <view class="nav_title center">评论</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+    <view bindtap="jrsj" class="nav_phone rel">
+        <view>进入商家</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+</view>
+<view class="footer" wx:else>
+    <view bindtap="shouye" class="rel" style="width:33.33%">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/index.png"></image>
+        </view>
+        <view class="nav_title center">回到首页</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+    <view bindtap="phone" class="rel" style="width:33.33%">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/lxtel.png"></image>
+        </view>
+        <view class="nav_title center">联系电话</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+    <view bindtap="comment" class="rel" style="width:33.33%">
+        <view class="icon rel">
+            <image class="ab udlr" mode="widthFix" src="../../image/nav.png"></image>
+        </view>
+        <view class="nav_title center">我要评论</view>
+        <form bindreset="formReset" bindsubmit="formid_one" class="plate_form" reportSubmit="true">
+            <button formType="submit"></button>
+        </form>
+    </view>
+</view>
+<view class="reply flex1" wx:if="{{comment==true}}">
+    <view class="reply_box">
+        <view class="reply_title flex1">发表评论</view>
+        <view class="reply_area">
+            <textarea bindinput="complete" placeholder="请输入留言" placeholderStyle="color:#999;"></textarea>
+        </view>
+        <view class="reply_bot">
+            <view bindtap="reply2" class="reply_liu">取消</view>
+            <view bindtap="publish" class="reply_liu reply_hui">发表</view>
+        </view>
+    </view>
+</view>
+<view class="reply flex1" wx:if="{{reply==true}}">
+    <view class="reply_box">
+        <view class="reply_title flex1">留言</view>
+        <view class="reply_area">
+            <textarea bindinput="complete1" placeholder="{{reflex_name}}" placeholderStyle="color:#999;"></textarea>
+        </view>
+        <view class="reply_bot">
+            <view bindtap="reply2" class="reply_liu">取消</view>
+            <view bindtap="reply3" class="reply_liu reply_hui">回复</view>
+        </view>
+    </view>
+</view>
+<view class="rob_image" wx:if="{{rob_redbag==true}}">
+    <image class="ab udlr" mode="aspectFill" src="../../image/red_back.png"></image>
+    <view bindtap="rob_redbag"></view>
+</view>
+<view class="rob_redbag udlr" wx:if="{{rob_redbag==true}}">
+    <view class="rob_head rel">
+        <image class="ab lr" mode="aspectFill" src="{{store.user_img}}" wx:if="{{store.store_id=='0'}}"></image>
+        <image class="ab lr" mode="aspectFill" src="{{url}}{{store.logo}}" wx:else></image>
+    </view>
+    <view class="rob_name">{{store.user_name}}</view>
+    <view class="rob_text" wx:if="{{hongbao_use1!=1}}">发了一个红包，金额随机</view>
+    <view class="Congratulations rel" wx:if="{{store.hb_type==2&&hongbao_use1==3}}">
+        <input bindblur="hb_keyword" class="ab udlr" placeholder="请输入口令" placeholderStyle="color: #f1e3b6;width:100%"></input>
+    </view>
+    <view class="Congratulations" wx:if="{{store.hb_type==1&&hongbao_use1==3}}">恭喜发财，大吉大利</view>
+    <view class="Congratulations" wx:if="{{hongbao_use1==1}}">手慢了,红包派完了</view>
+    <view class="Congratulations" wx:if="{{hongbao_use1==2}}">你已经抢过红包了</view>
+    <view class="redbag lr" wx:if="{{hongbao_use1==3}}">
+        <button wx:if="{{store.hb_type==2&&sure==false}}"></button>
+        <view bindtap="trans1" class="{{store.trans1}}" style="z-index:{{store.trans_1}};display:{{store.dis1}}">
+            <image mode="aspectFill" src="../../image/red_one.png"></image>
+        </view>
+        <view bindtap="trans1" class="{{store.trans1}}" style="z-index:{{store.trans_2}};display:{{store.dis2}}">
+            <image mode="aspectFill" src="../../image/red_two.png"></image>
+        </view>
+    </view>
+    <view bindtap="trans2" class="see_rob" wx:if="{{hongbao_use1!=3}}">查看大家的手气></view>
+    <image class="lr red_small" mode="aspectFill" src="../../image/red_small.png" wx:if="{{hongbao_use1==3}}"></image>
+</view>
+<view bindtap="rob_redbag" class="redbag_animation">
+    <image mode="aspectFill" src="../../image/red_animation_one.gif"></image>
+    <image mode="aspectFill" src="../../image/red_animation_two.gif"></image>
+</view>
+<view style="width:100%;height:100rpx;"></view>
+<view class="share_red" wx:if="{{share_red==true}}">
+    <view></view>
+    <view class="ab udlr">
+        <button class="ab" openType="share">{{store.hb_money}}元</button>
+        <image mode="aspectFit" src="../../image/share_red.png"></image>
+    </view>
+</view>

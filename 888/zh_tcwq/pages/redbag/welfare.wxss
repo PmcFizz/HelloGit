@@ -1,0 +1,195 @@
+.content_miao {
+    background-color: white;
+    padding: 20rpx 20rpx 0;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.welfare {
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 100rpx;
+}
+
+.welheader {
+    background-color: white;
+    padding: 1rpx 20rpx;
+}
+
+.headertext {
+    width: 100%;
+    margin-top: 15rpx;
+    height: 250rpx;
+    font-size: 28rpx;
+}
+
+.procedures {
+    width: 95%;
+    margin: 0 auto 0;
+    height: 60rpx;
+    font-size: 26rpx;
+    color: #666;
+    line-height: 70rpx;
+    text-align: right;
+}
+
+.addimg1 {
+    width: 25%;
+    height: 160rpx;
+    display: inline-block;
+    margin-bottom: 20rpx;
+}
+
+.addimg>image {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.addimg {
+    border: 2rpx solid #ccc;
+    width: 160rpx;
+    height: 160rpx;
+    display: inline-block;
+}
+
+.addimg1>image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.addimg1 view {
+    width: 40rpx;
+    height: 40rpx;
+    right: 10rpx;
+    border-radius: 10rpx;
+    z-index: 500;
+}
+
+.lianjie {
+    font-size: 26rpx;
+    border-top: 1rpx solid #ccc;
+    height: 70rpx;
+    margin-top: 30rpx;
+    color: #333;
+    width: 100%;
+}
+
+.section {
+    background-color: white;
+    margin-top: 20rpx;
+    padding: 0rpx 20rpx;
+}
+
+.section2 {
+    height: 80rpx;
+}
+
+.jine {
+    font-size: 26rpx;
+    border-bottom: 1rpx solid #ccc;
+    height: 80rpx;
+    color: #333;
+    width: 100%;
+}
+
+.secwhether {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.footer {
+    height: 80rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+}
+
+.footerbtn {
+    width: 100%;
+    height: 80rpx;
+    background-color: #ed414a;
+    color: white;
+    font-size: 28rpx;
+    border: none;
+    outline: none;
+    border-radius: 0rpx;
+}
+
+.top {
+    margin-top: 20rpx;
+}
+
+.border_top {
+    border-top: 1rpx solid #e5e5e5;
+}
+
+.envelope {
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+
+.envelope>view {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+
+.envelope>view view:nth-child(1) {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.envelope>view view:nth-child(2) {
+    width: 75%;
+    float: left;
+    height: 100%;
+}
+
+.envelope>view view text {
+    display: block;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto 0;
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    text-align-last: justify;
+}
+
+.envelope>view view input {
+    width: 100%;
+    height: 100%;
+}
+
+.envelope>view:last-child {
+    border: none;
+}
+
+.chooose {
+    width: 100%;
+    height: 80rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+    background: #fff;
+}
+
+.chooose>view {
+    float: left;
+}
+
+.chooose>view:nth-child(1) {
+    width: 60%;
+    height: 100%;
+    text-indent: 20rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+}
+
+.chooose>view:nth-child(2) {
+    width: 50rpx;
+    height: 60rpx;
+    right: 70rpx;
+}

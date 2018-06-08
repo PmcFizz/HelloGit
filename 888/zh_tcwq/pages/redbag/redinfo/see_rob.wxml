@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="header rel">
+        <image mode="aspectFill" src="../../image/see_rob.png"></image>
+        <image class="ab udlr" mode="aspectFill" src="{{store.user_img}}" wx:if="{{store.store_id=='0'}}"></image>
+        <image class="ab udlr" mode="aspectFill" src="{{url}}{{store.logo}}" wx:else></image>
+        <view class="ab">
+            <text>{{store.user_name}}</text>
+            <text>拼</text>
+        </view>
+        <view class="ab">恭喜发财，大吉大利</view>
+    </view>
+    <view class="body">
+        <view>{{store.hb_num}}个红包共{{store.hb_money}}元
+        <text wx:if="{{store.hb_num>total_num}}">剩余{{total_comment}}元</text>
+        </view>
+        <view>
+            <view wx:for="{{hongbao}}">
+                <view class="rel">
+                    <image class="ab ud" mode="aspectFill" src="{{item.img}}"></image>
+                </view>
+                <view>
+                    <text>{{item.name}}</text>
+                    <text>{{item.time}}</text>
+                </view>
+                <view>{{item.money}}元</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="mine_cash">抢过的金额会出现在本程序
+    <text style="color:#ed414a">“我的→钱包”</text>
+里哦</view>

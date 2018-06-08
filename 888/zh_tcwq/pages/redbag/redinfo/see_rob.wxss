@@ -1,0 +1,143 @@
+page {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding-bottom: 80rpx;
+}
+
+.header {
+    width: 100%;
+    height: 380rpx;
+}
+
+.mine_cash {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: #666;
+    position: fixed;
+    bottom: 0;
+}
+
+.header image:nth-child(1) {
+    width: 100%;
+    height: 100%;
+}
+
+.header image:nth-child(2) {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 10rpx;
+    border: 4rpx solid #ffbd96;
+}
+
+.header view:nth-child(3) {
+    width: 100%;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    bottom: 70rpx;
+}
+
+.header view text:nth-child(1) {
+    color: #000;
+    font-weight: 550;
+}
+
+.header view text:nth-child(2) {
+    color: #fff;
+    padding: 0 5rpx;
+    background: orange;
+    border-radius: 5rpx;
+    margin-left: 10rpx;
+}
+
+.header view:nth-child(4) {
+    width: 100%;
+    height: 60rpx;
+    line-height: 75rpx;
+    font-size: 24rpx;
+    text-align: center;
+    bottom: 27rpx;
+    color: #999;
+}
+
+.body {
+    background: #fff;
+}
+
+.body>view:nth-child(1) {
+    width: 100%;
+    height: 60rpx;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    color: #666;
+    text-indent: 2%;
+}
+
+.body>view:nth-child(2) {
+    width: 100%;
+    height: auto;
+}
+
+.body>view view {
+    width: 96%;
+    height: 100rpx;
+    margin: 10rpx auto 0;
+}
+
+.body>view view view {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.body>view view image {
+    height: 90rpx;
+    width: 90rpx;
+    border-radius: 10rpx;
+    left: 0;
+}
+
+.body>view view view:nth-child(1) {
+    width: 15%;
+}
+
+.body>view view view:nth-child(2) {
+    width: 55%;
+}
+
+.body>view view view text:nth-child(1) {
+    width: 100%;
+    height: 50%;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    font-weight: 590;
+    color: #000;
+    display: block;
+}
+
+.body>view view view text:nth-child(2) {
+    width: 100%;
+    height: 50%;
+    line-height: 50rpx;
+    font-size: 23rpx;
+    font-weight: 500;
+    color: #999;
+    display: block;
+}
+
+.body>view view view:nth-child(3) {
+    width: 30%;
+    font-weight: 600;
+    font-size: 24rpx;
+    line-height: 100rpx;
+    text-align: right;
+}

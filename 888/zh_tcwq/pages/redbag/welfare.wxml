@@ -1,0 +1,79 @@
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+    <view class="welfare">
+        <view class="content_miao">福利描述</view>
+        <view class="welheader">
+            <textarea class="headertext" name="details" placeholder="对大家说点什么(不能超出540个字符)" placeholderStyle="color:#999;"></textarea>
+            <view class="addimg1 rel" wx:for="{{imgArray}}">
+                <image class="ab udlr" mode="aspectFill" src="{{url1}}{{item}}"></image>
+                <view bindtap="delete" class="ab" data-index="{{index}}">
+                    <image mode="aspectFill" src="../image/delete.png" style="height:100%;width:100%"></image>
+                </view>
+            </view>
+            <view bindtap="choiseimg" class="addimg rel" wx:if="{{lunbo_len<9}}">
+                <image class="ab udlr" src="../image/add.png"></image>
+            </view>
+        </view>
+        <view class="envelope top" wx:if="{{checked1==false}}">
+            <view>
+                <view>
+                    <text>红包金额:</text>
+                </view>
+                <view>
+                    <input name="money" placeholder="福利金额（1至2000元）" type="digit"></input>
+                </view>
+            </view>
+            <view>
+                <view>
+                    <text>红包个数:</text>
+                </view>
+                <view>
+                    <input name="share" placeholder="分成几份（至少1份）" type="number"></input>
+                </view>
+            </view>
+        </view>
+        <view class="envelope top" wx:if="{{checked1==true}}">
+            <view>
+                <view>
+                    <text>单个金额:</text>
+                </view>
+                <view>
+                    <input name="money" placeholder="福利金额（0.1至2000元）" type="digit"></input>
+                </view>
+            </view>
+            <view>
+                <view>
+                    <text>红包个数:</text>
+                </view>
+                <view>
+                    <input name="share" placeholder="发几份（至少1份）" type="number"></input>
+                </view>
+            </view>
+        </view>
+        <view class="chooose border_top rel">
+            <view>是否平均分配福利</view>
+            <view class="ab ud">
+                <switch bindchange="switch1Change" checked="{{checked_average}}"></switch>
+            </view>
+        </view>
+        <view class="chooose  rel">
+            <view>是否开启口令模式</view>
+            <view class="ab ud">
+                <switch bindchange="switch2Change" checked="{{checked_average}}"></switch>
+            </view>
+        </view>
+        <view class="envelope" wx:if="{{checked2==true}}">
+            <view>
+                <view>
+                    <text>红包口令:</text>
+                </view>
+                <view>
+                    <input name="hb_keyword" placeholder="请输入汉字"></input>
+                </view>
+            </view>
+        </view>
+        <view class="procedures">红包手续费 {{procedures*100}}%</view>
+        <view class="footer">
+            <button class="footerbtn" disabled="{{disabled}}" formType="submit">撒福利并发布</button>
+        </view>
+    </view>
+</form>

@@ -1,0 +1,59 @@
+<view class="notice" wx:if="{{Congratulations.length>0}}">
+    <view></view>
+    <view>
+        <swiper autoplay="true" circular="true" class="jionbo gobyndsingle" interval="2000" vertical="true">
+            <swiper-item wx:for="{{Congratulations}}">
+          • 恭喜【
+          <text class="join-name gobyndsingle" style="width:100rpx;display:inline-block">{{item.name}}</text>】抢到了{{item.money}}元
+        </swiper-item>
+        </swiper>
+    </view>
+</view>
+<view class="header">
+    <image class="header_back" src="../image/redbag2.png"></image>
+    <view class="header_con flex-bet">
+        <view class="header_text">
+            <view class="header_font1">总撒福气</view>
+            <view class="header_font2" wx:if="{{price!=null}}">{{price}}</view>
+            <view class="header_font2" wx:else>0</view>
+        </view>
+        <view class="header_text">
+            <view class="header_font1">总人气</view>
+            <view class="header_font2" wx:if="{{views!=null}}">{{views}}</view>
+            <view class="header_font2" wx:else>0</view>
+        </view>
+        <view class="header_text">
+            <view class="header_font1">分享</view>
+            <view class="header_font2" wx:if="{{givelike!=null}}">{{givelike}}</view>
+            <view class="header_font2" wx:else>0</view>
+        </view>
+    </view>
+</view>
+<view bindtap="redinfo" class="banner" data-id="{{item.id}}" data-logo="{{item.logo}}" wx:for="{{store}}" wx:key="*this">
+    <image class="banner_tou" mode="aspectFill" src="{{item.user_img}}" wx:if="{{item.store_id=='0'}}"></image>
+    <image class="banner_tou" mode="aspectFill" src="{{url}}{{item.logo}}" wx:else></image>
+    <view class="banner_right">
+        <view class="flex-bet banner_top">
+            <view class="banner_title">{{item.user_name}}</view>
+            <view class="flex-center banner_kan">
+                <image class="liulan" src="../image/liulan.png"></image>
+                <view class="liulantext">{{item.views}}</view>
+            </view>
+        </view>
+        <view class="banner_content">{{item.details}}</view>
+        <view class="flex2 banner_img" wx:if="{{item.img!=''}}">
+            <image mode="aspectFill" src="{{url}}{{item}}" wx:for="{{item.img}}"></image>
+        </view>
+        <view class="flex-bet banner_bot">
+            <view class="flex-center banner_kan">
+                <image class="banner_botimg" src="../image/cost.png"></image>
+                <view class="redbag_money">¥{{item.hb_money}}</view>
+            </view>
+            <view class="redbag" wx:if="{{item.rob==true}}">抢福利进行中...</view>
+            <view class="redbag" wx:if="{{item.rob==false}}">福利已经被抢完了</view>
+        </view>
+    </view>
+</view>
+<view class="no_info" wx:if="{{store==null}}">
+    <image mode="widthFix" src="../image/no_info.png"></image>
+</view>

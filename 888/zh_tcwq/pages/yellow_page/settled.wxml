@@ -89,9 +89,13 @@
                 <view class="left">上传图片：</view>
                 <view class="right">
                     <view class="weui-cell uploadMyLogo"  style="height: auto;margin-bottom: 5rpx">
-                        <image bindtap="choose" wx:for="{{imgs}}" wx:key="{{index}}" class="ab udlr" mode="aspectFill" src="{{link}}{{item}}" >
-                            <span style="position: absolute;top: 0rpx;right: 12rpx;height:10rpx;width:10rpx;color:red" catchtap="delImg">X</span>
+                        <image wx:if="{{imgs.length!=0}}" bindtap="choosemyImgs" wx:for="{{imgs}}" wx:key="{{index}}" class="ab udlr" mode="aspectFill" src="{{link}}{{item}}" >
+                            <span data-index="{{index}}" style="position: absolute;top: 0rpx;right: 12rpx;height:10rpx;width:10rpx;color:red" catchtap="delImg">X</span>
                         </image>
+
+                        <image wx:if="{{imgs.length!=9}}" bindtap="choosemyImgs" class="ab udlr" mode="aspectFill" src="../image/logo.png" >
+                        </image>
+
                     </view>
                 </view>
             </view>

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd196fae-6f1c-4516-b8fd-6bd261914a54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,86 +18,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mine_yellow.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding>
-                <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yellowinfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/yellowinfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mine_yellow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#854#1739#0" expanded="false" />
-                <element signature="e#1765#2810#0" expanded="false" />
-                <element signature="e#2840#3037#0" expanded="false" />
-                <element signature="e#3069#3273#0" expanded="false" />
-                <element signature="e#3298#3357#0" expanded="false" />
-                <element signature="e#3382#3432#0" expanded="false" />
-                <element signature="e#3458#3511#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settled.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+            <state relative-caret-position="200">
+              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="12" />
               <folding>
-                <element signature="e#385#3638#0" expanded="false" />
-                <element signature="e#666#1386#0" expanded="false" />
-                <element signature="e#1511#2697#0" expanded="false" />
-                <element signature="e#2725#3512#0" expanded="false" />
-                <element signature="e#3669#4702#0" expanded="false" />
-                <element signature="e#4740#4999#0" expanded="false" />
-                <element signature="e#5033#5560#0" expanded="false" />
-                <element signature="e#5596#6342#0" expanded="false" />
-                <element signature="e#6376#6456#0" expanded="false" />
-                <element signature="e#6571#7582#0" expanded="false" />
-                <element signature="e#7611#7772#0" expanded="false" />
-                <element signature="e#7797#7909#0" expanded="false" />
-                <element signature="e#7932#8345#0" expanded="false" />
+                <element signature="e#402#3655#0" expanded="false" />
+                <element signature="e#683#1403#0" expanded="false" />
+                <element signature="e#1528#2714#0" expanded="false" />
+                <element signature="e#2742#3529#0" expanded="false" />
+                <element signature="e#4655#5105#0" expanded="false" />
+                <element signature="e#5139#5666#0" expanded="false" />
+                <element signature="e#5702#6448#0" expanded="false" />
+                <element signature="e#6482#6562#0" expanded="false" />
+                <element signature="e#6677#7624#0" expanded="false" />
+                <element signature="e#7670#8398#0" expanded="false" />
+                <element signature="e#8427#8588#0" expanded="false" />
+                <element signature="e#8613#8725#0" expanded="false" />
+                <element signature="e#8748#9161#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="214" column="14" lean-forward="true" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -108,8 +45,8 @@
       <file leaf-file-name="settled.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="92" column="127" lean-forward="false" selection-start-line="92" selection-start-column="127" selection-end-line="92" selection-end-column="127" />
+            <state relative-caret-position="298">
+              <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#text#0;n#view#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
@@ -117,39 +54,6 @@
                 <element signature="n#style#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#image#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settled.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="448" column="14" lean-forward="true" selection-start-line="448" selection-start-column="14" selection-end-line="448" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="316" column="11" lean-forward="true" selection-start-line="291" selection-start-column="8" selection-end-line="316" selection-end-column="11" />
-              <folding>
-                <element signature="e#531#5696#0" expanded="false" />
-                <element signature="e#5724#8467#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypost.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -172,6 +76,11 @@
       <find>fxzuid</find>
       <find>hidden=&quot;{{bkname!='装修师傅'}}</find>
       <find>radioChange</find>
+      <find>choose</find>
+      <find>curr</find>
+      <find>myImgs</find>
+      <find>S</find>
+      <find>imgs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -328,12 +237,12 @@
       <updated>1528473845983</updated>
       <workItem from="1528473847277" duration="279000" />
       <workItem from="1528474142624" duration="3076000" />
-      <workItem from="1528527562768" duration="11285000" />
+      <workItem from="1528527562768" duration="13707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14640000" />
+    <option name="totallyTimeSpent" value="17062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -391,7 +300,7 @@
         <state relative-caret-position="240">
           <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -452,7 +361,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,7 +465,7 @@
         <state relative-caret-position="80">
           <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -571,8 +480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="92" column="127" lean-forward="false" selection-start-line="92" selection-start-column="127" selection-end-line="92" selection-end-column="127" />
+        <state relative-caret-position="298">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#text#0;n#view#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
@@ -585,22 +494,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+        <state relative-caret-position="200">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="12" />
           <folding>
-            <element signature="e#385#3638#0" expanded="false" />
-            <element signature="e#666#1386#0" expanded="false" />
-            <element signature="e#1511#2697#0" expanded="false" />
-            <element signature="e#2725#3512#0" expanded="false" />
-            <element signature="e#3669#4702#0" expanded="false" />
-            <element signature="e#4740#4999#0" expanded="false" />
-            <element signature="e#5033#5560#0" expanded="false" />
-            <element signature="e#5596#6342#0" expanded="false" />
-            <element signature="e#6376#6456#0" expanded="false" />
-            <element signature="e#6571#7582#0" expanded="false" />
-            <element signature="e#7611#7772#0" expanded="false" />
-            <element signature="e#7797#7909#0" expanded="false" />
-            <element signature="e#7932#8345#0" expanded="false" />
+            <element signature="e#402#3655#0" expanded="false" />
+            <element signature="e#683#1403#0" expanded="false" />
+            <element signature="e#1528#2714#0" expanded="false" />
+            <element signature="e#2742#3529#0" expanded="false" />
+            <element signature="e#4655#5105#0" expanded="false" />
+            <element signature="e#5139#5666#0" expanded="false" />
+            <element signature="e#5702#6448#0" expanded="false" />
+            <element signature="e#6482#6562#0" expanded="false" />
+            <element signature="e#6677#7624#0" expanded="false" />
+            <element signature="e#7670#8398#0" expanded="false" />
+            <element signature="e#8427#8588#0" expanded="false" />
+            <element signature="e#8613#8725#0" expanded="false" />
+            <element signature="e#8748#9161#0" expanded="false" />
           </folding>
         </state>
       </provider>

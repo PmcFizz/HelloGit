@@ -8,6 +8,7 @@ Page({
         lbimages1: [],
         images1: [],
         logo: [],
+        imgs:[],
         yellow_info:{},
         imgHttp:'https://app.hy58.com/attachment/'
     },
@@ -136,26 +137,30 @@ Page({
             n.setData({
               rz_type: e.data.rz_type
             });
-            console.log(e.data.imgs.split(",")+"111111111111")
             if(e.data.imgs){
               n.setData({
                 imgs:e.data.imgs.split(",")
               })
-              console.log(n.data.imgs)
             }
-
         }
       });
     },
     // 删除图片
-    delImg: function () {
+    delImg: function (e) {
+      var index=e.currentTarget.dataset.index
+      var _self=this
       wx.showModal({
         title: "提示",
         content: '是否要删除',
         showCancel: true,
         cancelText: "取消",
         confirmText: "确定",
-        success: function(e) {},
+        success: function(e) {
+          _self.data.imgs.splice(index,1);
+          _self.setData({
+            imgs:_self.data.imgs
+          })
+        },
         fail: function(e) {},
         complete: function(e) {}
       })
@@ -212,12 +217,11 @@ Page({
     },
     choose: function(e) {
         var a = this, o = a.data.url, n = wx.getStorageSync("uniacid");
-        console.log(o), console.log(n), wx.chooseImage({
+        wx.chooseImage({
             count: 1,
             sizeType: [ "original", "compressed" ],
             sourceType: [ "album", "camera" ],
             success: function(e) {
-                console.log(e);
                 var t = e.tempFilePaths[0];
                 wx.uploadFile({
                     url: o + "app/index.php?i=" + n + "&c=entry&a=wxapp&do=Upload&m=zh_tcwq",
@@ -237,6 +241,32 @@ Page({
                 });
             }
         });
+    },
+    // 上传我的图片
+    choosemyImgs:function (e) {
+      var a = this, o = a.data.url, n = wx.getStorageSync("uniacid");
+      wx.chooseImage({
+        count: 1,
+        sizeType: [ "original", "compressed" ],
+        sourceType: [ "album", "camera" ],
+        success: function(e) {
+          var t = e.tempFilePaths[0];
+          wx.uploadFile({
+            url: o + "app/index.php?i=" + n + "&c=entry&a=wxapp&do=Upload&m=zh_tcwq",
+            filePath: t,
+            name: "upfile",
+            formData: {},
+            success: function(e) {
+              var t = a.data.imgs;
+              t.push(e.data)
+              a.setData({imgs:t })
+            },
+            fail: function(e) {
+              console.log(e);
+            }
+          });
+        }
+      });
     },
     lbdelete1: function(e) {
         var t = e.currentTarget.dataset.index, a = this.data.logo;
@@ -266,7 +296,8 @@ Page({
         });
     },
     formSubmit: function(e) {
-        console.log(e);
+        var imgs=this.data.imgs.join(",")
+        console.log(imgs);
         var t = this, a = wx.getStorageSync("city"), o = e.detail.value.name, n = e.detail.value.tel, l = e.detail.value.details, i = e.detail.value.address, s = "", c = t.data.logo, r = t.data.yellow_set, u = (t.data.items,
         t.data.start_lat + "," + t.data.start_lng);
         console.log(u);
@@ -301,7 +332,7 @@ Page({
                     money: T
                 },
                 success: function(e) {
-                    console.log(e), wx.requestPayment({
+                    wx.requestPayment({
                         timeStamp: e.data.timeStamp,
                         nonceStr: e.data.nonceStr,
                         package: e.data.package,
@@ -332,7 +363,7 @@ Page({
                                     rz_type: S,
                                     coordinates: u,
                                     content: l,
-                                    imgs: "",
+                                    imgs: imgs,
                                     tel2: h,
                                     cityname: a
                                 },
@@ -380,7 +411,7 @@ Page({
                     rz_type: S,
                     coordinates: u,
                     content: l,
-                    imgs: "",
+                    imgs: imgs,
                     tel2: h,
                     cityname: a
                 },

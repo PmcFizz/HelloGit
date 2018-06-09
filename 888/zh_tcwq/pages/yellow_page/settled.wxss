@@ -457,5 +457,8 @@ page {
 }
 .uploadMyLogo> image.udlr{
     bottom: auto;
+    float: left;
+    margin-left: 5rpx;
     top:11rpx;
+    position: relative;
 }

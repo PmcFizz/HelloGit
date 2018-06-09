@@ -85,13 +85,13 @@
                 </view>
             </view>
 
-            <view class="gg" style="height: 168rpx">
+            <view class="gg" style="height: 494rpx">
                 <view class="left">上传图片：</view>
                 <view class="right">
-                    <view class="weui-cell uploadMyLogo"  style="height: 168rpx">
-                        <image bindtap="choose" class="ab udlr" style="left: -400rpx" mode="aspectFill" src="../image/logo.png" ></image>
-                        <image bindtap="choose" class="ab udlr" style="left: -44rpx" mode="aspectFill" src="../image/logo.png" ></image>
-                        <image bindtap="choose" class="ab udlr" style="left: 300rpx" mode="aspectFill" src="../image/logo.png" ></image>
+                    <view class="weui-cell uploadMyLogo"  style="height: auto;margin-bottom: 5rpx">
+                        <image bindtap="choose" wx:for="{{imgs}}" wx:key="{{index}}" class="ab udlr" mode="aspectFill" src="{{link}}{{item}}" >
+                            <span style="position: absolute;top: 0rpx;right: 12rpx;height:10rpx;width:10rpx;color:red" catchtap="delImg">X</span>
+                        </image>
                     </view>
                 </view>
             </view>

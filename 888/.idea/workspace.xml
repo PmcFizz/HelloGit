@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd196fae-6f1c-4516-b8fd-6bd261914a54" name="Default" comment="" />
+    <list default="true" id="cd196fae-6f1c-4516-b8fd-6bd261914a54" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss" afterPath="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,18 +24,20 @@
       <file leaf-file-name="mine_yellow.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="80">
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mine_yellow.wxss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxss">
+      <file leaf-file-name="yellowinfo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/yellowinfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
+            <state relative-caret-position="560">
+              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -38,16 +46,87 @@
       <file leaf-file-name="mine_yellow.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="20">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#1031#2076#0" expanded="false" />
-                <element signature="e#2106#2303#0" expanded="false" />
-                <element signature="e#2335#2539#0" expanded="false" />
-                <element signature="e#2564#2623#0" expanded="false" />
-                <element signature="e#2648#2698#0" expanded="false" />
-                <element signature="e#2724#2777#0" expanded="false" />
+                <element signature="e#854#1739#0" expanded="false" />
+                <element signature="e#1765#2810#0" expanded="false" />
+                <element signature="e#2840#3037#0" expanded="false" />
+                <element signature="e#3069#3273#0" expanded="false" />
+                <element signature="e#3298#3357#0" expanded="false" />
+                <element signature="e#3382#3432#0" expanded="false" />
+                <element signature="e#3458#3511#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settled.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+              <folding>
+                <element signature="e#385#3638#0" expanded="false" />
+                <element signature="e#666#1386#0" expanded="false" />
+                <element signature="e#1511#2697#0" expanded="false" />
+                <element signature="e#2725#3512#0" expanded="false" />
+                <element signature="e#3669#4702#0" expanded="false" />
+                <element signature="e#4740#4999#0" expanded="false" />
+                <element signature="e#5033#5560#0" expanded="false" />
+                <element signature="e#5596#6342#0" expanded="false" />
+                <element signature="e#6376#6456#0" expanded="false" />
+                <element signature="e#6571#7582#0" expanded="false" />
+                <element signature="e#7611#7772#0" expanded="false" />
+                <element signature="e#7797#7909#0" expanded="false" />
+                <element signature="e#7932#8345#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="214" column="14" lean-forward="true" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settled.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="92" column="127" lean-forward="false" selection-start-line="92" selection-start-column="127" selection-end-line="92" selection-end-column="127" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#text#0;n#view#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#image#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settled.wxss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="448" column="14" lean-forward="true" selection-start-line="448" selection-start-column="14" selection-end-line="448" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,8 +134,8 @@
       <file leaf-file-name="mypost.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="288" column="11" lean-forward="true" selection-start-line="283" selection-start-column="24" selection-end-line="288" selection-end-column="11" />
+            <state relative-caret-position="580">
+              <caret line="316" column="11" lean-forward="true" selection-start-line="291" selection-start-column="8" selection-end-line="316" selection-end-column="11" />
               <folding>
                 <element signature="e#531#5696#0" expanded="false" />
                 <element signature="e#5724#8467#0" expanded="false" />
@@ -68,18 +147,8 @@
       <file leaf-file-name="mypost.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="820">
               <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mypost.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="313" column="14" lean-forward="true" selection-start-line="313" selection-start-column="14" selection-end-line="313" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -93,15 +162,32 @@
       <find>content_liulan1</find>
       <find>.bj</find>
       <find>bianji</find>
+      <find>num</find>
       <find>cancel</find>
+      <find>url</find>
+      <find>formSubmit</find>
+      <find>yellow_info</find>
+      <find>items</find>
+      <find>logo</find>
+      <find>fxzuid</find>
+      <find>hidden=&quot;{{bkname!='装修师傅'}}</find>
+      <find>radioChange</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js" />
-        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" />
         <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxss" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml" />
+        <option value="$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js" />
       </list>
     </option>
   </component>
@@ -116,6 +202,9 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -132,6 +221,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,32 +289,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="888" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="888" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zh_tcwq" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mypost" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,6 +299,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="fxzuid&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -248,6 +316,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cd196fae-6f1c-4516-b8fd-6bd261914a54" name="Default" comment="" />
@@ -257,23 +328,24 @@
       <updated>1528473845983</updated>
       <workItem from="1528473847277" duration="279000" />
       <workItem from="1528474142624" duration="3076000" />
+      <workItem from="1528527562768" duration="11285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3355000" />
+    <option name="totallyTimeSpent" value="14640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17482886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -289,15 +361,15 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17482886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -316,9 +388,72 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="e#854#1739#0" expanded="false" />
+            <element signature="e#1765#2810#0" expanded="false" />
+            <element signature="e#2840#3037#0" expanded="false" />
+            <element signature="e#3069#3273#0" expanded="false" />
+            <element signature="e#3298#3357#0" expanded="false" />
+            <element signature="e#3382#3432#0" expanded="false" />
+            <element signature="e#3458#3511#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5760">
+          <caret line="288" column="11" lean-forward="true" selection-start-line="283" selection-start-column="24" selection-end-line="288" selection-end-column="11" />
+          <folding>
+            <element signature="e#531#5696#0" expanded="false" />
+            <element signature="e#5724#8467#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6260">
+          <caret line="313" column="14" lean-forward="true" selection-start-line="313" selection-start-column="14" selection-end-line="313" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4260">
+          <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -343,16 +478,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="6260">
           <caret line="313" column="14" lean-forward="true" selection-start-line="313" selection-start-column="14" selection-end-line="313" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="198" column="1" lean-forward="true" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="288" column="11" lean-forward="true" selection-start-line="283" selection-start-column="24" selection-end-line="288" selection-end-column="11" />
+        <state relative-caret-position="580">
+          <caret line="316" column="11" lean-forward="true" selection-start-line="291" selection-start-column="8" selection-end-line="316" selection-end-column="11" />
           <folding>
             <element signature="e#531#5696#0" expanded="false" />
             <element signature="e#5724#8467#0" expanded="false" />
@@ -360,42 +511,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/mypost/mypost.wxml">
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/yellowinfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="560">
+          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#1031#2076#0" expanded="false" />
-            <element signature="e#2106#2303#0" expanded="false" />
-            <element signature="e#2335#2539#0" expanded="false" />
-            <element signature="e#2564#2623#0" expanded="false" />
-            <element signature="e#2648#2698#0" expanded="false" />
-            <element signature="e#2724#2777#0" expanded="false" />
+            <element signature="e#854#1739#0" expanded="false" />
+            <element signature="e#1765#2810#0" expanded="false" />
+            <element signature="e#2840#3037#0" expanded="false" />
+            <element signature="e#3069#3273#0" expanded="false" />
+            <element signature="e#3298#3357#0" expanded="false" />
+            <element signature="e#3382#3432#0" expanded="false" />
+            <element signature="e#3458#3511#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="181" column="37" lean-forward="true" selection-start-line="181" selection-start-column="37" selection-end-line="181" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="214" column="14" lean-forward="true" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="80">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="448" column="14" lean-forward="true" selection-start-line="448" selection-start-column="14" selection-end-line="448" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/mine_yellow.wxss">
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="460">
+          <caret line="92" column="127" lean-forward="false" selection-start-line="92" selection-start-column="127" selection-end-line="92" selection-end-column="127" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#text#0;n#view#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#image#0;n#view#0;n#view#1;n#view#3;n#view#0;n#form#0;n#view#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zh_tcwq/pages/yellow_page/settled.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="150" column="24" lean-forward="false" selection-start-line="150" selection-start-column="24" selection-end-line="150" selection-end-column="24" />
+          <folding>
+            <element signature="e#385#3638#0" expanded="false" />
+            <element signature="e#666#1386#0" expanded="false" />
+            <element signature="e#1511#2697#0" expanded="false" />
+            <element signature="e#2725#3512#0" expanded="false" />
+            <element signature="e#3669#4702#0" expanded="false" />
+            <element signature="e#4740#4999#0" expanded="false" />
+            <element signature="e#5033#5560#0" expanded="false" />
+            <element signature="e#5596#6342#0" expanded="false" />
+            <element signature="e#6376#6456#0" expanded="false" />
+            <element signature="e#6571#7582#0" expanded="false" />
+            <element signature="e#7611#7772#0" expanded="false" />
+            <element signature="e#7797#7909#0" expanded="false" />
+            <element signature="e#7932#8345#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

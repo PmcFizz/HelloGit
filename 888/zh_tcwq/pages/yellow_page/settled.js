@@ -8,7 +8,8 @@ Page({
         lbimages1: [],
         images1: [],
         logo: [],
-        yellow_info:{}
+        yellow_info:{},
+        imgHttp:'https://app.hy58.com/attachment/'
     },
     onLoad: function(e) {
         console.log(e)
@@ -135,8 +136,29 @@ Page({
             n.setData({
               rz_type: e.data.rz_type
             });
+            console.log(e.data.imgs.split(",")+"111111111111")
+            if(e.data.imgs){
+              n.setData({
+                imgs:e.data.imgs.split(",")
+              })
+              console.log(n.data.imgs)
+            }
+
         }
       });
+    },
+    // 删除图片
+    delImg: function () {
+      wx.showModal({
+        title: "提示",
+        content: '是否要删除',
+        showCancel: true,
+        cancelText: "取消",
+        confirmText: "确定",
+        success: function(e) {},
+        fail: function(e) {},
+        complete: function(e) {}
+      })
     },
     getPhoneNumber: function(e) {
         var t = this, a = wx.getStorageSync("key"), o = e.detail.iv, n = e.detail.encryptedData;

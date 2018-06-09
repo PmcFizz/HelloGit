@@ -446,3 +446,16 @@ page {
     line-height: 80rpx;
     margin-top: 20rpx;
 }
+.uploadMyLogo{
+    display: block;
+}
+
+.uploadMyLogo> image{
+    float: left;
+    height: 147rpx;
+    width: 140rpx;
+}
+.uploadMyLogo> image.udlr{
+    bottom: auto;
+    top:11rpx;
+}

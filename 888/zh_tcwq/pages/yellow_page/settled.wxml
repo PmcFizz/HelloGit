@@ -84,6 +84,18 @@
                     </view>
                 </view>
             </view>
+
+            <view class="gg" style="height: 168rpx">
+                <view class="left">上传图片：</view>
+                <view class="right">
+                    <view class="weui-cell uploadMyLogo"  style="height: 168rpx">
+                        <image bindtap="choose" class="ab udlr" style="left: -400rpx" mode="aspectFill" src="../image/logo.png" ></image>
+                        <image bindtap="choose" class="ab udlr" style="left: -44rpx" mode="aspectFill" src="../image/logo.png" ></image>
+                        <image bindtap="choose" class="ab udlr" style="left: 300rpx" mode="aspectFill" src="../image/logo.png" ></image>
+                    </view>
+                </view>
+            </view>
+
             <view class="foot">
                 <view>入驻装修师傅</view>
                 <view>

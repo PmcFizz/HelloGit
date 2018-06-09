@@ -4,6 +4,7 @@ Page({
     data: {
         activeIndex: 0,
         index: 0,
+        fxzuid:'',
         currentTab: 0,
         swiperCurrent: 0,
         indicatorDots: !1,
@@ -177,9 +178,10 @@ Page({
             console.log("转发获取到的userid:", t.userid);
             a = t.userid;
         }
-        console.log("fxzuid", a), this.setData({
-            fxzuid: a
-        });
+        if(a){
+          this.setData({ fxzuid: a })
+        }
+
         var n = this;
         wx.getLocation({
             type: "wgs84",

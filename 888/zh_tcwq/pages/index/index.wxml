@@ -62,7 +62,7 @@
         </swiper>
     </view>
     <view class="plate">
-        <view wx:if="{{index<6}}" wx:for="{{zjggbk}}">
+        <view wx:if="{{index<6}}" wx:for="{{zjggbk}}" wx:key="{{index}}">
             <view bindtap="jumps" class="rel" data-appid="{{item.appid}}" data-id="{{item.id}}" data-name="{{item.xcx_name}}" data-src="{{item.src}}" data-type="{{item.state}}" data-wb_src="{{item.wb_src}}" style="width:100%;height:100%;">
                 <image class="ab ud" mode="aspectFill" src="{{url}}{{item.logo}}" style="width:100%;height:100%;border-radius:10rpx;"></image>
             </view>
@@ -225,7 +225,7 @@
         </view>
     </view>
     <view class="yelist" hidden="{{bkname!='装修师傅'}}">
-        <view bindtap="yellow_info" class="yellow_list" data-id="{{item.id}}" data-user_id="{{item.user_id}}" wx:for="{{yellow_list}}">
+        <view bindtap="yellow_info" class="yellow_list" data-id="{{item.id}}" data-user_id="{{item.user_id}}" wx:key="{{index}}" wx:for="{{yellow_list}}">
             <view class="list_head">
                 <view>
                     <image class="yellow_logo" mode="aspectFill" src="{{url}}{{item.logo}}"></image>

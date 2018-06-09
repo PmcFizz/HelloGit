@@ -49,18 +49,17 @@ Page({
       confirmText: "确定",
       success: function(e) {
         if (e.confirm) {
-          console.log("用户点击确定");
-          var t = a.currentTarget.dataset.id;
-          app.util.request({
-            url: "entry/wxapp/DelPost",
-            cachetime: "0",
-            data: {
-              id: t
-            },
-            success: function(e) {
-              console.log(e), 1 == e.data && o.reload();
-            }
-          });
+          // var t = a.currentTarget.dataset.id;
+          // app.util.request({
+          //   url: "entry/delete/DelPost",
+          //   cachetime: "0",
+          //   data: {
+          //     id: t
+          //   },
+          //   success: function(e) {
+          //     console.log(e), 1 == e.data && o.reload();
+          //   }
+          // });
         } else e.cancel && console.log("用户点击取消");
       },
       fail: function(e) {},

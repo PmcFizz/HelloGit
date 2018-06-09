@@ -33,12 +33,40 @@ Page({
   },
   // TODO 前往编辑页面
   bianji:function(t){
+    var e = t.currentTarget.dataset.id
     wx.navigateTo({
-      url: "settled?id=" + t,
+      url: "settled?id=" + e,
     });
   },
   // TODO 删除
   cancel:function () {
+    var o = this;
+    wx.showModal({
+      title: "提示",
+      content: "是否删除",
+      showCancel: !0,
+      cancelText: "取消",
+      confirmText: "确定",
+      success: function(e) {
+        if (e.confirm) {
+          console.log("用户点击确定");
+          var t = a.currentTarget.dataset.id;
+          app.util.request({
+            url: "entry/wxapp/DelPost",
+            cachetime: "0",
+            data: {
+              id: t
+            },
+            success: function(e) {
+              console.log(e), 1 == e.data && o.reload();
+            }
+          });
+        } else e.cancel && console.log("用户点击取消");
+      },
+      fail: function(e) {},
+      complete: function(e) {}
+    });
+
     // app.util.request({
     //   url: 'entry/wxapp/MyYellowPage',
     //   cachetime: '0',

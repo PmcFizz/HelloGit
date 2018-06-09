@@ -10,6 +10,8 @@ Page({
         logo: []
     },
     onLoad: function(e) {
+      this.getInfoById(e)
+
         imgArray = [], imgArray1 = [], lbimgArray = [], lbimgArray1 = [];
         var o = wx.getStorageSync("System").is_tel, t = wx.getStorageSync("users").id;
         app.util.request({
@@ -36,7 +38,7 @@ Page({
             }
         });
         var n = wx.getStorageSync("users"), l = this;
-        console.log(n), console.log(getApp().imglink, getApp().getuniacid);
+
         var i = wx.getStorageSync("url");
         app.util.request({
             url: "entry/wxapp/yellowType",
@@ -72,7 +74,8 @@ Page({
                     }
                 });
             }
-        }), app.util.request({
+        });
+        app.util.request({
             url: "entry/wxapp/YellowSet",
             cachetime: "0",
             success: function(e) {
@@ -80,7 +83,7 @@ Page({
                 var a = [];
                 for (var t in e.data) {
                     var o = e.data;
-                    0 == e.data[t].money ? e.data[t].money1 = "免费" : e.data[t].money1 = e.data[t].money + "元", 
+                    0 == e.data[t].money ? e.data[t].money1 = "免费" : e.data[t].money1 = e.data[t].money + "元",
                     e.data[t].text = e.data[t].days + "天 " + e.data[t].money1;
                 }
                 e.data.map(function(e) {
@@ -94,10 +97,28 @@ Page({
             }
         });
         var a = wx.getStorageSync("url2");
-        console.log(i), this.setData({
+        this.setData({
             url: a,
             link: i
         });
+    },
+    getInfoById:function (e) {
+      var n = this, a = wx.getStorageSync("url");
+      n.setData({
+        url: a
+      }), app.util.request({
+        url: "entry/wxapp/YellowPageInfo",
+        cachetime: "0",
+        data: {
+          id: e.id
+        },
+        success: function(e) {
+          e.data.sh_time = app.ormatDate(e.data.sh_time).slice(0, 10), e.data.coordinates = e.data.coordinates.split(","),
+            n.setData({
+              yellow_info: e.data
+            });
+        }
+      });
     },
     getPhoneNumber: function(e) {
         var t = this, a = wx.getStorageSync("key"), o = e.detail.iv, n = e.detail.encryptedData;
@@ -209,7 +230,7 @@ Page({
     },
     formSubmit: function(e) {
         console.log(e);
-        var t = this, a = wx.getStorageSync("city"), o = e.detail.value.name, n = e.detail.value.tel, l = e.detail.value.details, i = e.detail.value.address, s = "", c = t.data.logo, r = t.data.yellow_set, u = (t.data.items, 
+        var t = this, a = wx.getStorageSync("city"), o = e.detail.value.name, n = e.detail.value.tel, l = e.detail.value.details, i = e.detail.value.address, s = "", c = t.data.logo, r = t.data.yellow_set, u = (t.data.items,
         t.data.start_lat + "," + t.data.start_lng);
         console.log(u);
         var d = t.data.store, g = t.data.store2, p = t.data.nav, m = t.data.index, y = t.data.index_two, f = p[m], w = g[y];
@@ -222,7 +243,7 @@ Page({
             console.log(r[D].money);
             var T = Number(r[D].money);
         }
-        if (console.log(r), console.log(t.data.rz_type), console.log(c[0]), "" == o ? s = "公司名称不能为空" : "" == n ? s = "公司电话不能为空" : "" == l ? s = "公司简介不能为空" : null == i || "" == i ? s = "请正确填写公司地址" : 0 == c.length ? s = "请上传公司logo" : null == h && (s = "还没进行手机号验证"), 
+        if (console.log(r), console.log(t.data.rz_type), console.log(c[0]), "" == o ? s = "公司名称不能为空" : "" == n ? s = "公司电话不能为空" : "" == l ? s = "公司简介不能为空" : null == i || "" == i ? s = "请正确填写公司地址" : 0 == c.length ? s = "请上传公司logo" : null == h && (s = "还没进行手机号验证"),
         "" != s) wx.showModal({
             title: "提示",
             content: s,

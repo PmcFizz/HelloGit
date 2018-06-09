@@ -7,10 +7,14 @@ Page({
         zsnum: 0,
         lbimages1: [],
         images1: [],
-        logo: []
+        logo: [],
+        yellow_info:{}
     },
     onLoad: function(e) {
-      this.getInfoById(e)
+        console.log(e)
+        if(e.type==='edit'){
+          this.getInfoById(e)
+        }
 
         imgArray = [], imgArray1 = [], lbimgArray = [], lbimgArray1 = [];
         var o = wx.getStorageSync("System").is_tel, t = wx.getStorageSync("users").id;
@@ -79,7 +83,7 @@ Page({
             url: "entry/wxapp/YellowSet",
             cachetime: "0",
             success: function(e) {
-                console.log(e);
+
                 var a = [];
                 for (var t in e.data) {
                     var o = e.data;
@@ -89,7 +93,9 @@ Page({
                 e.data.map(function(e) {
                     var t = {};
                     t.value = e.text, t.name = e.id, a.push(t);
-                }), console.log(a), a[0].checked = !0, l.setData({
+                });
+                a[0].checked = !0;
+                l.setData({
                     items: a,
                     yellow_set: o,
                     rz_type: a[0].name
@@ -104,18 +110,30 @@ Page({
     },
     getInfoById:function (e) {
       var n = this, a = wx.getStorageSync("url");
-      n.setData({
-        url: a
-      }), app.util.request({
+      n.setData({        url: a      });
+      app.util.request({
         url: "entry/wxapp/YellowPageInfo",
         cachetime: "0",
         data: {
           id: e.id
         },
         success: function(e) {
-          e.data.sh_time = app.ormatDate(e.data.sh_time).slice(0, 10), e.data.coordinates = e.data.coordinates.split(","),
+          e.data.sh_time = app.ormatDate(e.data.sh_time).slice(0, 10);
+          e.data.coordinates = e.data.coordinates.split(",")
             n.setData({
               yellow_info: e.data
+            });
+            n.setData({
+              mdgg:e.data.content
+            })
+            n.setData({
+              address:e.data.company_address
+            })
+            n.setData({
+              logo:[e.data.logo]
+            })
+            n.setData({
+              rz_type: e.data.rz_type
             });
         }
       });
@@ -168,9 +186,7 @@ Page({
         });
     },
     radioChange: function(e) {
-        console.log("radio发生change事件，携带value值为：", e.detail.value), this.setData({
-            rz_type: e.detail.value
-        });
+        this.setData({ rz_type: e.detail.value });
     },
     choose: function(e) {
         var a = this, o = a.data.url, n = wx.getStorageSync("uniacid");
@@ -207,7 +223,6 @@ Page({
         });
     },
     gongg: function(e) {
-        console.log(e.detail.value);
         var t = parseInt(e.detail.value.length);
         this.setData({
             zsnum: t

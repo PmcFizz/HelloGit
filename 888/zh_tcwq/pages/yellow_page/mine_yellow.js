@@ -35,7 +35,7 @@ Page({
   bianji:function(t){
     var e = t.currentTarget.dataset.id
     wx.navigateTo({
-      url: "settled?id=" + e,
+      url: "settled?id=" + e+"&type=edit",
     });
   },
   // TODO 删除

@@ -41,7 +41,7 @@
                     <view class="right">
                         <view class="weui-cell weui-cell_input">
                             <view class="weui-cell__bd">
-                                <input class="weui-input" name="name" placeholder="如：张三 - 水电安装"></input>
+                                <input class="weui-input" name="name" value="{{yellow_info.company_name}}" placeholder="如：张三 - 水电安装"></input>
                             </view>
                         </view>
                     </view>
@@ -51,7 +51,7 @@
                     <view class="right">
                         <view class="weui-cell weui-cell_input">
                             <view class="weui-cell__bd">
-                                <input class="weui-input" name="tel" placeholder="请输入手机号码" type="number"></input>
+                                <input class="weui-input" name="tel" value="{{yellow_info.link_tel}}" placeholder="请输入手机号码" type="number"></input>
                             </view>
                         </view>
                     </view>
